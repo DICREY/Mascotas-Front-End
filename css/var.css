@@ -1,9 +1,19 @@
 :root {
     --white: #FFF;
     --black: #000;
+    --gray:#8f8f8f5d;
     --darkgolden:#b8860b;
-    --background: url("../img/montanas-en-bosque-minimalista.jpg");
+    --darkcyan:#008b8b;
+    --darkgray:#2c2c2c;
+    --font-size:12px;
+    --background: url("https://github.com/DICREY/Multimedia-Mascotas/blob/main/imgs/arana_2560x1440.jpg?raw=true");
 }
 html {
-    color: darkgoldenrod;
+    color: darkcyan;
+}
+@media (max-width:400px) {
+    :root {
+        --background: url("https://github.com/DICREY/Multimedia-Mascotas/blob/main/imgs/arana_1220x2160_vertical.jpg?raw=true");
+
+    }
 }
