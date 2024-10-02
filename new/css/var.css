@@ -1,0 +1,12 @@
+:root {
+    --white: #FFF;
+    --black: #000;
+    --gray:#8f8f8f5d;
+    --darkgolden:#b8860b;
+    --darkcyan:#008b8b;
+    --darkgray:#2c2c2c;
+    --background: url("https://www.xtrafondos.com/wallpapers/resized/pug-mirando-una-galleta-12485.jpg?s=large");
+}
+html {
+    color: darkcyan;
+}
