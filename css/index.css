@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all .3s ease-in-out;
 }
 html {
     background: var(--background) center no-repeat;
@@ -17,18 +18,21 @@ body {
     backdrop-filter: blur(2px);
     box-shadow: 0 0 30px var(--black);
     outline: 2px solid var(--gray);
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: darkcyan #000 ;
 }
 header {
     display: flex;
     height: 8%;
     background: var(--darkgray);
+    padding: 10px;
 }
-#logo {
-    width: 55%;
-}
-#logo1 {
-    width: 45%;
-    background: var(--darkcyan) ;
+.logo img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 nav {
     display: grid;
@@ -45,6 +49,22 @@ nav ol {
     text-decoration: none;
     color: var(--white);
     font-weight: bold;
+    font-size: var(--font-size);
+}
+.btn-link:hover + .service,.service:hover {
+    display: grid;
+    position: fixed;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--white);
+    background: var(--gray);
+    gap: 5px;
+}
+.service {
+    display: none;
+}
+.service li {
+    cursor: pointer;
 }
 .btn-link::before {
     content: "";
@@ -75,4 +95,7 @@ main .info-right {
 footer {
     height: 7%;
     background: var(--darkcyan);
+}
+.inactive {
+    display: none;
 }

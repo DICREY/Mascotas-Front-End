@@ -5,15 +5,18 @@
     --darkgolden:#b8860b;
     --darkcyan:#008b8b;
     --darkgray:#2c2c2c;
-    --font-size:12px;
-    --background: url("https://github.com/DICREY/Multimedia-Mascotas/blob/main/imgs/arana_2560x1440.jpg?raw=true");
+    --font-size:14px;
+    --font-size-desplege:15px;
+    --background: url("https://github.com/DICREY/Multimedia-Mascotas/blob/main/imgs/arana_1220x2160_vertical.jpg?raw=true");
 }
 html {
     color: darkcyan;
 }
 @media (max-width:400px) {
+}
+@media (400px < width) {
     :root {
-        --background: url("https://github.com/DICREY/Multimedia-Mascotas/blob/main/imgs/arana_1220x2160_vertical.jpg?raw=true");
-
+        --font-size:16px;
+        --background: url("https://github.com/DICREY/Multimedia-Mascotas/blob/main/imgs/arana_2560x1440.jpg?raw=true");
     }
 }
