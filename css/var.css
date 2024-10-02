@@ -1,0 +1,9 @@
+:root {
+    --white: #FFF;
+    --black: #000;
+    --darkgolden:darkgoldenrod;
+    --background: url("../img/montanas-en-bosque-minimalista.jpg");
+}
+html {
+    color: darkgoldenrod;
+}

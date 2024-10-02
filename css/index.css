@@ -1,0 +1,16 @@
+@import url("var.css");
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    width: 100%;
+    background: var(--background) center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
