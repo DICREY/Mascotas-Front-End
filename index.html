@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
 </head>
 <body>
@@ -17,28 +18,76 @@
     </header>
     <nav>
         <ol>
-            <li><a class="btn-link" href="#">Inicio</a></li>
-            <li><a class="btn-link" href="#">Servicios</a>
-                <ol class="service">
-                    <li><a class="btn-link" href="#">Aseo general</a></li>
-                    <li><a class="btn-link" href="#">Consulta</a></li>
-                    <li><a class="btn-link" href="#">Tratamiento</a></li>
-                </ol>
-            </li>
-            <li><a class="btn-link" href="#">Contactos</a>
-                <ol class="service">
-                    <li><a class="btn-link" href="#">WhatsApp</a></li>
-                    <li><a class="btn-link" href="#">Telefonó</a></li>
-                </ol>
-            </li>
-            <li><a class="btn-link" href="#">Ayuda</a></li>
+            <span class="main-search">
+                <input class="search" type="search" list="search" placeholder="¿Que necesitas?">
+                <datalist id="search">
+                    <option value="alimento"></option>
+                    <option value="aseo"></option>
+                    <option value="juguetes"></option>
+                    <option value="tratamiento"></option>
+                </datalist>
+            </span>
+            <span class="span-btn-menu">
+                <i class='bx bx-menu btn-menu'></i>
+            </span>
+            <ol class="menu-deploy inactive">
+                <li><a class="btn-link" href="#">Inicio</a></li>
+                <li><a class="btn-link" href="#">Perros</a>
+                    <ol class="deploying">
+                        <li><a class="btn-link" href="#">Alimentos</a></li>
+                        <li><a class="btn-link" href="#">Accesorios</a></li>
+                        <li><a class="btn-link" href="#">Higiene</a></li>
+                    </ol>
+                </li>
+                <li><a class="btn-link" href="#">Gatos</a>
+                    <ol class="deploying">
+                        <li><a class="btn-link" href="#">Alimentos</a></li>
+                        <li><a class="btn-link" href="#">Accesorios</a></li>
+                        <li><a class="btn-link" href="#">Higiene</a></li>
+                    </ol>
+                </li>
+                <li><a class="btn-link" href="#">Otras Especies</a>
+                    <ol class="deploying">
+                        <li><a class="btn-link" href="#">Hámsters</a>
+                            
+                        </li>
+                        <li><a class="btn-link" href="#">Conejos</a></li>
+                        <li><a class="btn-link" href="#">Aves</a></li>
+                        <li><a class="btn-link" href="#">Peces</a></li>
+                    </ol>
+                </li>
+                <li><a class="btn-link" href="#">Servicios</a>
+                    <ol class="deploying">
+                        <li><a class="btn-link" href="#">Aseo general</a></li>
+                        <li><a class="btn-link" href="#">Consulta</a></li>
+                        <li><a class="btn-link" href="#">Tratamiento</a></li>
+                    </ol>
+                </li>
+                <li><a class="btn-link" href="#">Contactos</a>
+                    <ol class="deploying">
+                        <li><a class="btn-link" href="#">WhatsApp</a></li>
+                        <li><a class="btn-link" href="#">Telefonó</a></li>
+                    </ol>
+                </li>
+                <li><a class="btn-link" href="#">Ayuda</a></li>
+            </ol>
         </ol>
     </nav>
     <main>
         <section class="info-left"></section>
         <aside class="info-right"></aside>
     </main>
-    <footer></footer>
+    <footer>
+        <section class="important footer-section">
+            <h6>Importante</h6>
+        </section>
+        <section class="contacto footer-section">
+            <h6>Contactanos</h6>
+        </section>
+        <section class="redes footer-section">
+            <h6>Redes</h6>
+        </section>
+    </footer>
     <script src="scripts/index.js"></script>
 </body>
 </html>
