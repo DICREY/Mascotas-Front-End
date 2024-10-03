@@ -140,7 +140,7 @@ footer {
 .inactive {
     display: none;
 }
-@media (400px < width) {
+@media (600px < width) {
     /* .main-search {
         display: none;
     } */
