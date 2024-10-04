@@ -3,14 +3,12 @@ document.addEventListener("DOMContentLoaded",() => {
     const menuDeploy = document.querySelector(".menu-deploy")
 
     btnMenu.addEventListener("click",() => {
-        btnMenu.classList.toggle("rotate")
-
-        if (btnMenu.className == "bx bx-x btn-menu"){
+        if (btnMenu.className === "bx bx-x btn-menu"){
             btnMenu.className = "bx bx-menu btn-menu"
-            menuDeploy.classList.toggle("inactive")
+            menuDeploy.classList.add("inactive")
         } else {
             btnMenu.className = "bx bx-x btn-menu"
-            menuDeploy.classList.toggle("inactive")
+            menuDeploy.classList.remove("inactive")
         }
     })
 })

@@ -75,7 +75,7 @@ nav ol ol{
     top: 100%;
     background: var(--darkgray2);
 }
-.bx-menu {
+.bx-x {
     transform:
         rotateZ(180deg);
 }
