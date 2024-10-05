@@ -2,23 +2,30 @@
     --white: #FFF;
     --black: #000;
     --gray:#8f8f8f5d;
-    --darkgray:#1b1b1be1;
-    --background: #ffefe0;
+    --background: #e0f1ff;
     --blue: #3b3eff;
     --red: #a00000;
+    --font-size-title:20px;
     --font-size:14px;
     --size-icon:44px;
-    --secundary: #603813;
-    --card: #503c2a;
-    --lighter-primary:#86715d;
-    --second-background: #201a15;
-    --foreground: hsl(31 6.7% 0.92%);
+    --secundary: darkcyan;
+    --card: #006363;
+    --lighter-primary:#79a3a3;
+    --second-background: #002727;
+    --foreground: #030202;
 }
 /* html {
     color:brown;
-} */
-@media (400px < width) {
+    } */
+@media (400px < width < 1500px) {
     :root {
+        --font-size-title:30px;
         --font-size:16px;
+    }
+}
+@media (1500px < width) {
+    :root {
+        --font-size-title:50px;
+        --font-size:20px;
     }
 }

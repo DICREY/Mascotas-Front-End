@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
 @import url("var.css");
 *{
     box-sizing: border-box;
@@ -5,6 +6,9 @@
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: all .3s ease-in-out;
+}
+::-webkit-scrollbar {
+    display:none;
 }
 body {
     display:flex;
@@ -25,15 +29,28 @@ header {
     width: 100%;
     color: var(--white);
 }
-.logo {
+.logo-sena {
     height: 40px;
     width: 40px;
-}
-.logo img {
     object-fit: cover;
-    width: 100%;
-    height: 100%;
     border-radius: 50%;
+}
+.name-corp {
+    font-family: "sofia",cursive;
+    font-weight: 400;
+    font-size: var(--font-size-title);
+}
+.picture-logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: rgb(230, 220, 199);
+    border: 2px solid var(--lighter-primary);
+}
+.logo {
+    height: auto;
+    width: 50%;
+    border-radius: 10px;
 }
 .main-search {
     position: relative;
@@ -46,7 +63,7 @@ header {
     width: auto;
     padding: 5px 8px;
     background: transparent;
-    border: 1px solid var(--gray);
+    border: 1px solid var(--lighter-primary);
     font-size: var(--font-size);
     color: var(--white);
 }
@@ -78,6 +95,8 @@ main {
     background: transparent;
 }
 nav {
+    position: sticky;
+    top: 0;
     display: flex;
     width: 100%;
     padding: 2px;
@@ -156,6 +175,63 @@ nav ol ol li {
 .deploying li {
     cursor: pointer;
 }
+.btn-float,.btn-float-address {
+    cursor: pointer;
+    position: fixed;
+    display: grid;
+    place-items: center;
+    height: 40px;
+    width: 40px;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--card);
+    color: var(--white);
+    background-color: var(--card);
+}
+.btn-float {
+    z-index: 3;
+}
+.btn-float-address{
+    z-index: 2;
+}
+.icon-btn-float{
+    font-size: 1.3rem;
+    transition: all 0.3s ease-in-out;
+}
+.bx-x{
+    transform: rotate(360deg);
+}
+.icon-whatsapp {
+    font-size: 1.8rem;
+    transform: translateY(-50px);
+    transition: all 0.2s ease-in-out;
+}
+.icon-whatsapp:hover{
+    background-color: rgb(4, 221, 4);
+    color: white;
+    border-color: white;
+}
+.icon-phone {    
+    font-size: 1.8rem;
+    transform: translateY(-100px);
+    transition: all 0.2s ease-in-out;
+}
+.icon-phone:hover{
+    color: rgb(0, 110, 255);
+    background-color: white;
+    border-color:rgb(0, 110, 255);
+}
+.icon-gmail {    
+    font-size: 1.6rem;
+    transform: translateY(-150px);
+    transition: all 0.2s ease-in-out;
+}
+.icon-gmail:hover{
+    color: rgb(141, 63, 63);
+    background-color: white;
+    border-color: rgb(141, 63, 63);
+}
 footer {
     background: var(--second-background);
     padding: 10px;
@@ -230,17 +306,13 @@ footer {
 }
 @media (700px < width) {
     header {
-        padding: 25px;
+        padding: 15px;
     }
-    .logo {
+    .logo-sena {
         height: 60px;
         width: 60px;
     }
-    /* .main-search {
-        display: none;
-    } */
     nav {
-        position: relative;
         padding: 5px 8px;
     }
     nav ol {
