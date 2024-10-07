@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded",() => {
             btnFloatIcon.className = name
         }
         btnFloatWhatsapp.classList.toggle("icon-whatsapp")
-        btnFloatPhone.classList.toggle("icon-phone").classList.toggle("inactive")
-        btnFloatGmail.classList.toggle("icon-gmail").classList.toggle("inactive")
+        btnFloatPhone.classList.toggle("icon-phone")
+        btnFloatGmail.classList.toggle("icon-gmail")
     }
 })
