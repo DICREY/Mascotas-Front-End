@@ -16,14 +16,24 @@
     <main>
         <form>
             <h1>LOGIN</h1>
-            <span>
-                <input class="input" type="email" placeholder="Email" required>
-                <i class='bx bxs-user'></i>
-            </span>
-            <span>
-                <input class="input" type="password" placeholder="Password" required>
-                <i class='bx bx-lock'></i>
-            </span>
+            <div>
+                <input class="input" type="email" required>
+                <i class='bx bxs-user icon'></i>
+                <span class="span-input email">Email</span>
+            </div>
+            <div>
+                <input class="input" type="password" required>
+                <i class='bx bx-lock icon'></i>
+                <span class="span-input password">Password</span>
+            </div>
+            <div class="div-forgot">
+                <span>
+                    <input class="" type="checkbox">
+                    <strong>Remember</strong>
+                </span>
+                <a class="link" href="#">Register</a>
+            </div>
+            <a class="link" href="#">¿you forgot password?</a>
             <button class="btn-send" type="submit">Send</button>
         </form>
     </main>
