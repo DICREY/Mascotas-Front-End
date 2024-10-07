@@ -9,8 +9,9 @@ document.addEventListener("DOMContentLoaded",() => {
     const btnScrollLeft = document.querySelector(".bx-chevron-left")
     const btnScrollRight = document.querySelector(".bx-chevron-right")
     const contenedorAds = document.querySelector(".ads-offers")
+    const sectionProducts = document.querySelector(".section-products")
 
-    let list = [
+    const adsList = [
         {
         url: "https://i.pinimg.com/564x/b2/7d/2d/b27d2d22ab6b6c7d9e7dfd862d607786.jpg",
         name:"HappyDog",
@@ -34,6 +35,19 @@ document.addEventListener("DOMContentLoaded",() => {
         {
         url: "https://i.pinimg.com/564x/64/72/75/6472757b246d9d27826dd13544bef275.jpg",
         name:"ParejaGatosFranceses",
+        },
+    ]
+    
+    const productList = [
+        {
+            name: "Croquetas",
+            img: "",
+            price: 5000,
+        },
+        {
+            name: "Bone toy",
+            img: "",
+            price: 2000,
         },
     ]
 
@@ -69,7 +83,7 @@ document.addEventListener("DOMContentLoaded",() => {
         btnFloatGmail.classList.toggle("icon-gmail")
     }
 
-    function cardImg(list) {
+    function addAds(list) {
         for (let i of list){
             const ads = document.createElement("img")
             ads.src = i.url
@@ -79,5 +93,29 @@ document.addEventListener("DOMContentLoaded",() => {
         }
     }
 
-    cardImg(list)
+    function addProducts(list) {
+        for (let i of list ) {
+            const product = document.createElement("div")
+            const imgProduct = document.createElement("img")
+            const nameProduct = document.createElement("p")
+            const priceProduct = document.createElement("p")
+            const btnBuy = document.createElement("button")
+
+            product.classList.add("productCard")
+            imgProduct.src = i.url
+            nameProduct.innerText = "Name: " + i.name
+            priceProduct.innerText = "Price: $" + i.price
+            btnBuy.innerText = "Add Cart"
+            btnBuy.classList.add("btn-link")
+
+            product.appendChild(imgProduct)
+            product.appendChild(nameProduct)
+            product.appendChild(priceProduct)
+            product.appendChild(btnBuy)
+            sectionProducts.appendChild(product)
+        }
+    }
+
+    addAds(adsList)
+    addProducts(productList)
 })
