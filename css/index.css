@@ -243,9 +243,10 @@ nav ol ol li {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    height: 40vh;
+    height: 60vh;
     width: 70vw;
     gap: 5px;
+    border-radius: 10px;
     background: var(--card);
     scroll-snap-align: center;
 }
@@ -255,10 +256,13 @@ nav ol ol li {
     color: var(--white);
     text-wrap: nowrap;
 }
-/* .productCard p:nth-child(2) {
+.productCard img {
+    height: 60%;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
 }
-.productCard p:nth-child(3) {   
-} */
 .productCard button {
     background: var(--card);
 }
