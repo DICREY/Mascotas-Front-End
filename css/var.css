@@ -10,7 +10,7 @@
     --font-size-title:20px;
     --size-icon:34px;
     --size-icon2:30px;
-    --size-icon-float:24px;
+    --size-icon-float:22px;
     --secundary: #a1d3faaf;
     --card: #006363;
     --lighter-primary:#79a3a3;
@@ -23,7 +23,7 @@
         --font-size:16px;
         --font-size2:22px;
         --size-icon2:38px;
-        --size-icon-float:32px;
+        --size-icon-float:30px;
     }
 }
 @media (1600px < width) {

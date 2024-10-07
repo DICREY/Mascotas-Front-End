@@ -216,6 +216,9 @@ nav ol ol li {
     display: flex;
     height: 90%;
     width: auto;
+    border: 2px solid var(--secundary);
+    border-radius: 10px;
+    box-shadow: 0 0 20px;
     scroll-snap-align: center;
     background: var(--card);
 }
