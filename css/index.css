@@ -13,9 +13,9 @@
 body {
     display:flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;
-    background: var(--background) center no-repeat;
+    background: var(--secundary) center no-repeat;
     background-size: cover;
     background-attachment: fixed;
     overflow: auto;
@@ -93,7 +93,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* min-height: 100%; */
     width: 100%;
     background: transparent;
 }
@@ -143,15 +142,22 @@ nav ol ol li {
 .btn-link {
     cursor: pointer;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     padding: 5px 10px;
     font-weight: bold;
     color: var(--lighter-primary);
     font-size: var(--font-size);
     text-wrap: nowrap;
+    text-decoration: none;
+    text-align: center;
     border: 2px solid transparent;
     border-radius: 10px;
-    text-decoration: none;
+}
+.btn-link i {
+    font-size: var(--font-size2);
 }
 .btn-link:hover {
     background: rgba(156, 100, 74, 0.274);
@@ -194,7 +200,6 @@ nav ol ol li {
     position: absolute;
     padding: 0;
     color: var(--white);
-    background: var(--card);
     font-size: var(--size-icon2);
     border-radius: 50%;
     border: 2px solid;
@@ -215,7 +220,6 @@ nav ol ol li {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-padding: center;
-    background: var(--secundary);
 }
 .ads-offers img {
     display: flex;
@@ -248,6 +252,7 @@ nav ol ol li {
 }
 .productCard p {
     font-weight: bold;
+    font-size: var(--font-size);
     color: var(--white);
     text-wrap: nowrap;
 }
