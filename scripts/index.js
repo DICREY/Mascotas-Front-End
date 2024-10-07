@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded",() => {
     const btnFloatWhatsapp = document.querySelector("#icon-whatsapp")
     const btnFloatPhone = document.querySelector("#icon-phone")
     const btnFloatGmail = document.querySelector("#icon-gmail")
+    const btnScrollLeft = document.querySelector(".bx-chevron-left")
+    const btnScrollRight = document.querySelector(".bx-chevron-right")
+    const contenedorAds = document.querySelector(".ads-offers")
+
 
     btnFloat.addEventListener("click",floatBtn)
 
@@ -19,13 +23,23 @@ document.addEventListener("DOMContentLoaded",() => {
         }
     })
 
+    btnScrollLeft.addEventListener("click",() => {
+        contenedorAds.scrollBy({ left:-100, behavior: 'smooth' })
+    })
+
+    btnScrollRight.addEventListener("click",() => {
+        contenedorAds.scrollBy({ left:100, behavior: 'smooth' })
+    })
+
     function floatBtn(){
         const name = "bx bxs-chat icon-btn-float"
-        let nameClass = name == btnFloatIcon.className ? "bx bx-x icon-btn-float" : "bx bxs-chat icon-btn-float"
-        btnFloatIcon.className = nameClass
+        if (btnFloatIcon.className === name) {
+            btnFloatIcon.className = "bx bx-x icon-btn-float"
+        } else {
+            btnFloatIcon.className = name
+        }
         btnFloatWhatsapp.classList.toggle("icon-whatsapp")
-        btnFloatPhone.classList.toggle("icon-phone")
-        btnFloatGmail.classList.toggle("icon-gmail")
+        btnFloatPhone.classList.toggle("icon-phone").classList.toggle("inactive")
+        btnFloatGmail.classList.toggle("icon-gmail").classList.toggle("inactive")
     }
-
 })

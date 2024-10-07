@@ -80,7 +80,7 @@ header {
     position: absolute;
     right: 5%;
     color: var(--white);
-    font-size: var(--size-icon2);
+    font-size: var(--font-size2);
     z-index: 3;
 }
 .search:focus + .bx-search-alt {
@@ -101,6 +101,7 @@ nav {
     width: 100%;
     padding: 2px;
     background: var(--card);
+    z-index: 4;
 }
 nav ol {
     display: flex;
@@ -175,32 +176,75 @@ nav ol ol li {
 .deploying li {
     cursor: pointer;
 }
+.section-ads-offers {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: auto;
+}
+.btn-ads {
+    cursor: pointer;
+    position: absolute;
+    padding: 0;
+    color: var(--white);
+    background: var(--card);
+    font-size: var(--size-icon2);
+    border-radius: 50%;
+    border: 2px solid;
+}
+.bx-chevron-left {
+    left: 10px;
+}
+.bx-chevron-right {
+    right: 10px;
+}
+.ads-offers {
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+    padding: 10px;
+    gap: var(--font-size);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: center;
+    background: var(--secundary);
+}
+.ads-offers img {
+    display: flex;
+    height: 90%;
+    width: auto;
+    scroll-snap-align: center;
+    background: var(--blue);
+}
 .btn-float,.btn-float-address {
     cursor: pointer;
     position: fixed;
     display: grid;
     place-items: center;
-    height: 40px;
-    width: 40px;
+    padding: 10px;
     bottom: 30px;
-    right: 30px;
+    right: 20px;
     border-radius: 50%;
     border: 2px solid var(--card);
     color: var(--white);
     background-color: var(--card);
 }
 .btn-float {
-    z-index: 3;
+    padding: 10px;
+    z-index: 5;
 }
 .btn-float-address{
-    z-index: 2;
+    z-index: 4;
 }
 .icon-btn-float{
-    font-size: 1.3rem;
+    font-size: var(--size-icon-float);
     transition: all 0.3s ease-in-out;
 }
 .icon-whatsapp {
-    font-size: 1.8rem;
+    font-size: var(--size-icon-float);
     transform: translateY(-50px);
     transition: all 0.2s ease-in-out;
 }
@@ -210,7 +254,7 @@ nav ol ol li {
     border-color: white;
 }
 .icon-phone {    
-    font-size: 1.8rem;
+    font-size: var(--size-icon-float);
     transform: translateY(-100px);
     transition: all 0.2s ease-in-out;
 }
@@ -220,7 +264,7 @@ nav ol ol li {
     border-color:rgb(0, 110, 255);
 }
 .icon-gmail {    
-    font-size: 1.6rem;
+    font-size: var(--size-icon-float);
     transform: translateY(-150px);
     transition: all 0.2s ease-in-out;
 }
