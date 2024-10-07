@@ -70,18 +70,21 @@ form div {
 .input:focus {
     color: var(--white);
 }
-.input:focus + .icon {
+/* .input:focus + .icon {
     color: transparent;
-}
+} */
 .input:focus ~ .span-input {
     transform: translateY(-100%);
 }
 .icon {
     position: absolute;
     font-size: var(--font-size2);
-    right: 4%;
+    right: 1%;
     z-index: 3;
     transition: all .3s ease-in-out;
+}
+.i-password {
+    cursor: pointer;
 }
 input[type="checkbox"] {
     accent-color: var(--black);
@@ -119,4 +122,12 @@ input[type="checkbox"] {
 }
 .btn-send:hover {
     background: var(--gray);
+}
+@media (300px < width) {
+    form {
+        width: auto;
+    }
+    .div-forgot {
+        gap: 25px;
+    }
 }
