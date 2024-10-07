@@ -49,6 +49,7 @@ form div {
     position: absolute;
     left: 0;
     font-weight: bold;
+    font-size: var(--font-size-login);
     z-index: 1;
     transition: all .3s ease-in-out;
 }
@@ -59,7 +60,7 @@ form div {
     border: none;
     border-bottom: 2px solid var(--white);
     outline: none;
-    font-size: var(--font-size);
+    font-size: var(--font-size-login);
     color: transparent;
     z-index: 2;
     transition: all .3s ease-in-out;
@@ -78,7 +79,7 @@ form div {
 }
 .icon {
     position: absolute;
-    font-size: var(--font-size2);
+    font-size: var(--font-size-login2);
     right: 1%;
     z-index: 3;
     transition: all .3s ease-in-out;
@@ -88,12 +89,20 @@ form div {
 }
 input[type="checkbox"] {
     accent-color: var(--black);
+    height: var(--font-size);
+    width: var(--font-size);
+}
+.div-forgot {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-login);
 }
 .link {
     position: relative;
     color: var(--white);
     text-decoration: none;
     font-weight: bold;
+    font-size: var(--font-size-login);
 }
 .link::before {
     content: "";
@@ -114,7 +123,7 @@ input[type="checkbox"] {
     padding: 5px 10px;
     width: 100%;
     color: var(--white);
-    font-size: var(--font-size);
+    font-size: var(--font-size-login);
     font-weight: bold;
     border-radius: 10px;
     border: 2px solid var(--white);
