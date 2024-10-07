@@ -244,7 +244,7 @@ nav ol ol li {
     flex-direction: column;
     padding: 10px;
     height: 60vh;
-    width: 70vw;
+    /* width: 70vw; */
     gap: 5px;
     border-radius: 10px;
     background: var(--card);
