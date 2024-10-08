@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
 @import url("var.css");
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline-color:var(--card);
+}
+::selection {
+    color: var(--white);
+    background: var(--card);
 }
 body {
     display:flex;
@@ -12,7 +18,7 @@ body {
     flex-direction: column;
     height: 100vh;
     width: 100%;
-    background: var(--background-login);
+    background: var(--background-login) no-repeat right;
     background-attachment: fixed;
     background-size: cover;
     overflow: auto;
@@ -34,8 +40,22 @@ form {
     border: 2px solid var(--gray);
     border-radius: 10px;
     box-shadow: 0 0 30px var(--black);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
     color: var(--white);
+}
+form h1 {
+    color: var(--white);
+    user-select: none;
+}
+form h1:first-child {
+    font-weight: 400;
+    font-family: "sofia",cursive;
+    text-shadow: 
+        0 5px 3px var(--card),
+        0 3px 3px var(--card);
+}
+form h1:nth-child(2) {
+    width: 100%;
 }
 form div {
     position: relative;
@@ -43,15 +63,14 @@ form div {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    /* outline: 2px sol; */
 }
 .span-input {
     position: absolute;
     left: 0;
     font-weight: bold;
-    font-size: var(--font-size-login);
+    font-size: var(--font-size);
     z-index: 1;
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 .input {
     width: 100%;
@@ -60,10 +79,10 @@ form div {
     border: none;
     border-bottom: 2px solid var(--white);
     outline: none;
-    font-size: var(--font-size-login);
+    font-size: var(--font-size);
     color: transparent;
     z-index: 2;
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 .input::placeholder {
     color: var(--white);
@@ -71,66 +90,69 @@ form div {
 .input:focus {
     color: var(--white);
 }
-/* .input:focus + .icon {
-    color: transparent;
-} */
 .input:focus ~ .span-input {
     transform: translateY(-100%);
 }
 .icon {
     position: absolute;
-    font-size: var(--font-size-login2);
+    font-size: var(--font-size2);
     right: 1%;
     z-index: 3;
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 .i-password {
     cursor: pointer;
-}
-input[type="checkbox"] {
-    accent-color: var(--black);
-    height: var(--font-size);
-    width: var(--font-size);
-}
-.div-forgot {
-    display: flex;
-    align-items: center;
-    font-size: var(--font-size-login);
 }
 .link {
     position: relative;
     color: var(--white);
     text-decoration: none;
     font-weight: bold;
-    font-size: var(--font-size-login);
+    font-size: var(--font-size);
+    transition: all .2s ease-in-out;
+}
+.link:hover {
+    text-shadow: 
+        0 2px 5px var(--card),
+        0 2px 5px var(--card);
 }
 .link::before {
     content: "";
     position: absolute;
-    height: 3px;
+    height: 2px;
     width: 0;
     top: 100%;
     left: 50%;
     background: var(--white);
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 .link:hover::before {
     width: 100%;
     left: 0;
+    box-shadow: 0 1px 1px 1px var(--card);
 }
 .btn-send {
     cursor: pointer;
     padding: 5px 10px;
     width: 100%;
     color: var(--white);
-    font-size: var(--font-size-login);
+    font-size: var(--font-size);
     font-weight: bold;
     border-radius: 10px;
     border: 2px solid var(--white);
     background: transparent;
+    transition: all .2s ease-in-out;
 }
 .btn-send:hover {
     background: var(--gray);
+}
+.span-register {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
+.span-register p {
+    font-size: var(--font-size);
 }
 @media (300px < width) {
     form {

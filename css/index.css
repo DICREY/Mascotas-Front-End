@@ -10,6 +10,10 @@
 ::-webkit-scrollbar {
     display:none;
 }
+::selection {
+    color: var(--white);
+    background: var(--card);
+}
 body {
     display:flex;
     flex-direction: column;
@@ -51,8 +55,9 @@ header {
     width: 50%;
     border-radius: 10px;
 }
-header span div{
+header span ol{
     display: flex;
+    list-style: none;
 }
 .main-search {
     position: relative;
@@ -102,7 +107,7 @@ nav {
     width: 100%;
     padding: 2px;
     background: var(--card);
-    z-index: 4;
+    z-index: 3;
 }
 nav ol {
     display: flex;
@@ -178,7 +183,7 @@ nav ol ol li {
     border-radius: 10px;
     border: 2px solid var(--lighter-primary);
     gap: 5px;
-    z-index: 3;
+    z-index: 4;
 }
 .deploying {
     display: none;
