@@ -75,7 +75,7 @@ form span {
     outline: none;
     font-size: var(--font-size);
     color: var(--white);
-    z-index: 2;
+    z-index: 1;
     transition: all .2s ease-in-out;
 }
 .input::placeholder {
@@ -90,9 +90,9 @@ input[type="checkbox"] {
     font-size: var(--font-size2);
     right: 1%;
     bottom: 10%;
-    z-index: 3;
-    transition: all .2s ease-in-out;
     color: var(--white);
+    z-index: 20;
+    transition: all .2s ease-in-out;
 }
 .i-password {
     cursor: pointer;

@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150vh;
+    width: 100vw;
+    background: #000;
+    overflow: auto;
+}
+main {
+    height: 90%;
+    width: 80%;
+}
+.cuadro-contenedor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    width: 100%;
+    background: darkcyan;
+}
+.cuadro {
+    height: 100px;
+    width: 100px;
+    border: 2px solid rgb(147, 147, 147);
+    border-radius: 10px;
+}
+#uno {
+    background: gray;
+}
+#dos {  
+    position: sticky;
+    top: 0;
+    background: darkgoldenrod;
+    left: 50%;
+}
+#tres {
+    background: darkblue;
+}
+#cuatro {
+    background: darkred;
+}
