@@ -4,105 +4,103 @@
     padding: 0;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    outline-color:var(--card);
-}
-::selection {
-    color: var(--white);
-    background: var(--card);
 }
 body {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-    background: var(--second-background);
-    background-attachment: fixed;
-    background-size: cover;
-    overflow: auto;
-}
-main {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    background: var(--second-background);
+    background-size: cover;
+    background-attachment: fixed;
 }
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 80vw;
     padding: 15px;
-    gap: 15px;
+    gap: 8px;
+    backdrop-filter: blur(5px);
     border: 2px solid var(--gray);
     border-radius: 10px;
     box-shadow: 0 0 30px var(--black);
-    backdrop-filter: blur(2px);
-    color: var(--white);
-}
-form h1 {
-    color: var(--white);
-    user-select: none;
 }
 form h1:first-child {
+    user-select: none;
+    color: var(--white);
     font-weight: 400;
     font-family: "sofia",cursive;
     text-shadow: 
-        0 5px 3px var(--card),
-        0 3px 3px var(--card);
+    0 5px 3px var(--card),
+    0 3px 3px var(--card);
 }
 form h1:nth-child(2) {
+    color: var(--white);
     width: 100%;
 }
-form div {
-    position: relative;
+.names {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
+    gap: 8px;
     width: 100%;
 }
-.span-input {
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-    font-size: var(--font-size);
-    z-index: 1;
-    transition: all .2s ease-in-out;
+.names span {
+    display: flex;
+    gap: 2px;
+}
+.span-password {
+    position: relative;
+    width: 100%;
 }
 .input {
     width: 100%;
-    padding: 5px 20px 5px 5px;
+    padding: 5px 20px 5px 0px;
     background: transparent;
     border: none;
     border-bottom: 2px solid var(--white);
     outline: none;
     font-size: var(--font-size);
-    color: transparent;
+    color: var(--white);
     z-index: 2;
     transition: all .2s ease-in-out;
 }
 .input::placeholder {
     color: var(--white);
 }
-.input:focus {
-    color: var(--white);
-}
-.input:focus ~ .span-input {
-    transform: translateY(-100%);
-}
 .icon {
     position: absolute;
     font-size: var(--font-size2);
     right: 1%;
+    bottom: 10%;
     z-index: 3;
     transition: all .2s ease-in-out;
+    color: var(--white);
 }
 .i-password {
     cursor: pointer;
 }
+.btn-send {
+    cursor: pointer;
+    padding: 5px 10px;
+    width: 100%;
+    color: var(--white);
+    font-size: var(--font-size);
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid var(--white);
+    background: transparent;
+    transition: all .2s ease-in-out;
+}
+.btn-send:hover {
+    background: var(--gray);
+}
 .link {
+    cursor: pointer;
     position: relative;
     color: var(--white);
     text-decoration: none;
@@ -130,34 +128,15 @@ form div {
     left: 0;
     box-shadow: 0 1px 1px 1px var(--card);
 }
-.btn-send {
-    cursor: pointer;
-    padding: 5px 10px;
-    width: 100%;
-    color: var(--white);
-    font-size: var(--font-size);
-    font-weight: bold;
-    border-radius: 10px;
-    border: 2px solid var(--white);
-    background: transparent;
-    transition: all .2s ease-in-out;
-}
-.btn-send:hover {
-    background: var(--gray);
-}
-.span-register {
-    display: flex;
-    width: 100%;
-    gap: 5px;
-}
-.span-register p {
-    font-size: var(--font-size);
-}
-@media (300px < width) {
+
+@media (500px < width) {
     form {
         width: auto;
     }
-    .div-forgot {
-        gap: 25px;
+    .names {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 12px;
     }
 }
