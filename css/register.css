@@ -40,11 +40,15 @@ form h1:first-child {
     font-weight: 400;
     font-family: "sofia",cursive;
     text-shadow: 
-    0 5px 3px var(--card),
-    0 3px 3px var(--card);
+        0 5px 3px var(--card),
+        0 3px 3px var(--card);
 }
 form h1:nth-child(2) {
     color: var(--white);
+    width: 100%;
+}
+form span {
+    position: relative;
     width: 100%;
 }
 .names {
