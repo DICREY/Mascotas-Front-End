@@ -27,7 +27,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--second-background);
+    background: var(--second);
     padding: 10px;
     width: 100%;
     color: var(--white);
@@ -176,7 +176,7 @@ nav ol ol li {
     position: absolute;
     padding: 10px;
     width: auto;
-    background: var(--second-background);
+    background: var(--second);
     list-style: none;
     text-wrap: nowrap;
     color: var(--lighter-primary);
@@ -326,7 +326,7 @@ nav ol ol li {
     border-color: rgb(141, 63, 63);
 }
 footer {
-    background: var(--second-background);
+    background: var(--second);
     padding: 10px;
     width: 100%;
     height: auto;
