@@ -5,6 +5,10 @@
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+::selection {
+    color: var(--white);
+    background: var(--card);
+}
 body {
     display: flex;
     flex-direction: column;
@@ -71,6 +75,10 @@ form h1:nth-child(2) {
 }
 .input::placeholder {
     color: var(--white);
+}
+input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: var(--black);
 }
 .icon {
     position: absolute;
