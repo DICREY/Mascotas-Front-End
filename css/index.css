@@ -107,7 +107,7 @@ nav {
     width: 100%;
     padding: 2px;
     background: var(--card);
-    z-index: 30;
+    z-index: 50;
 }
 nav ol {
     display: flex;
@@ -183,7 +183,7 @@ nav ol ol li {
     border-radius: 10px;
     border: 2px solid var(--lighter-primary);
     gap: 5px;
-    z-index: 40;
+    z-index: 80;
 }
 .deploying {
     display: none;
