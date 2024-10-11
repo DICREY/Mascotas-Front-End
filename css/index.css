@@ -183,7 +183,7 @@ nav ol ol li {
     border-radius: 10px;
     border: 2px solid var(--lighter-primary);
     gap: 5px;
-    z-index: 4;
+    z-index: 40;
 }
 .deploying {
     display: none;
