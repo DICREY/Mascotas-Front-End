@@ -2,10 +2,6 @@ document.addEventListener("DOMContentLoaded",() => {
     const btnMenu = document.querySelector(".btn-menu")
     const menuDeploy = document.querySelector(".menu-deploy")
     const btnFloat = document.querySelector(".btn-float")
-    const btnFloatIcon = document.querySelector(".icon-btn-float")
-    const btnFloatWhatsapp = document.querySelector("#icon-whatsapp")
-    const btnFloatPhone = document.querySelector("#icon-phone")
-    const btnFloatGmail = document.querySelector("#icon-gmail")
     const btnScrollLeft = document.querySelector(".bx-chevron-left")
     const btnScrollRight = document.querySelector(".bx-chevron-right")
     const contenedorAds = document.querySelector(".ads-offers")
@@ -59,7 +55,6 @@ document.addEventListener("DOMContentLoaded",() => {
         },
     ]
 
-    btnFloat.addEventListener("click",floatBtn)
 
     btnMenu.addEventListener("click",() => {
         if (btnMenu.className === "bx bx-x btn-menu"){
@@ -78,18 +73,6 @@ document.addEventListener("DOMContentLoaded",() => {
     btnScrollRight.addEventListener("click",() => {
         contenedorAds.scrollBy({ left:100, behavior: 'smooth' })
     })
-
-    function floatBtn(){
-        const name = "bx bxs-chat icon-btn-float"
-        if (btnFloatIcon.className === name) {
-            btnFloatIcon.className = "bx bx-x icon-btn-float"
-        } else {
-            btnFloatIcon.className = name
-        }
-        btnFloatWhatsapp.classList.toggle("icon-whatsapp")
-        btnFloatPhone.classList.toggle("icon-phone")
-        btnFloatGmail.classList.toggle("icon-gmail")
-    }
 
     function addAds(list) {
         for (let i of list){

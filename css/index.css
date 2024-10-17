@@ -271,60 +271,6 @@ nav ol ol li {
 .productCard button {
     background: var(--card);
 }
-.btn-float,.btn-float-address {
-    cursor: pointer;
-    position: fixed;
-    display: grid;
-    place-items: center;
-    padding: 10px;
-    bottom: 30px;
-    right: 20px;
-    border-radius: 50%;
-    border: 2px solid var(--card);
-    color: var(--white);
-    background-color: var(--card);
-}
-.btn-float {
-    padding: 10px;
-    z-index: 5;
-}
-.btn-float-address{
-    z-index: 4;
-}
-.icon-btn-float{
-    font-size: var(--size-icon-float);
-    transition: all 0.3s ease-in-out;
-}
-.icon-whatsapp {
-    font-size: var(--size-icon-float);
-    transform: translateY(-50px);
-    transition: all 0.2s ease-in-out;
-}
-.icon-whatsapp:hover{
-    background-color: rgb(4, 221, 4);
-    color: white;
-    border-color: white;
-}
-.icon-phone {    
-    font-size: var(--size-icon-float);
-    transform: translateY(-100px);
-    transition: all 0.2s ease-in-out;
-}
-.icon-phone:hover{
-    color: rgb(0, 110, 255);
-    background-color: white;
-    border-color:rgb(0, 110, 255);
-}
-.icon-gmail {    
-    font-size: var(--size-icon-float);
-    transform: translateY(-150px);
-    transition: all 0.2s ease-in-out;
-}
-.icon-gmail:hover{
-    color: rgb(141, 63, 63);
-    background-color: white;
-    border-color: rgb(141, 63, 63);
-}
 footer {
     background: var(--second);
     padding: 10px;
