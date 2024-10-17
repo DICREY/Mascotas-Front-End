@@ -88,7 +88,7 @@ header span ol{
     right: 5%;
     color: var(--white);
     font-size: var(--font-size2);
-    z-index: 3;
+    z-index: 30;
 }
 .search:focus + .bx-search-alt {
     color: transparent;
@@ -107,7 +107,7 @@ nav {
     width: 100%;
     padding: 2px;
     background: var(--card);
-    z-index: 3;
+    z-index: 50;
 }
 nav ol {
     display: flex;
@@ -183,7 +183,7 @@ nav ol ol li {
     border-radius: 10px;
     border: 2px solid var(--lighter-primary);
     gap: 5px;
-    z-index: 4;
+    z-index: 80;
 }
 .deploying {
     display: none;
