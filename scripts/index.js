@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded",() => {
     const btnMenu = document.querySelector(".btn-menu")
     const menuDeploy = document.querySelector(".menu-deploy")
-    const btnFloat = document.querySelector(".btn-float")
     const btnScrollLeft = document.querySelector(".bx-chevron-left")
     const btnScrollRight = document.querySelector(".bx-chevron-right")
     const contenedorAds = document.querySelector(".ads-offers")
