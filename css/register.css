@@ -47,6 +47,13 @@ form h1:nth-child(2) {
     color: var(--white);
     width: 100%;
 }
+.sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
 form span {
     position: relative;
     width: 100%;
@@ -55,7 +62,7 @@ form span {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 8px;
+    gap: 10px;
     width: 100%;
 }
 .names span {
@@ -141,8 +148,10 @@ input[type="checkbox"] {
     left: 0;
     box-shadow: 0 1px 1px 1px var(--card);
 }
-
-@media (500px < width) {
+.inactive {
+    display: none;
+}
+@media (600px < width) {
     form {
         width: auto;
     }
@@ -150,6 +159,10 @@ input[type="checkbox"] {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        text-wrap: nowrap;
         gap: 12px;
+    }
+    .terms-policy {
+        gap: 50px;
     }
 }
