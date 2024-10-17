@@ -50,7 +50,7 @@ form h1:nth-child(2) {
 .sections {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     width: 100%;
     gap: 10px;
 }
