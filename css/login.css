@@ -1,4 +1,5 @@
 @import url("var.css");
+@import url("bem.css");
 *{
     box-sizing: border-box;
     padding: 0;

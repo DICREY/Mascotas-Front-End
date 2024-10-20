@@ -66,11 +66,11 @@ document.addEventListener("DOMContentLoaded",() => {
     })
 
     btnScrollLeft.addEventListener("click",() => {
-        contenedorAds.scrollBy({ left:-100, behavior: 'smooth' })
+        contenedorAds.scrollBy({ left:-200, behavior: 'smooth' })
     })
 
     btnScrollRight.addEventListener("click",() => {
-        contenedorAds.scrollBy({ left:100, behavior: 'smooth' })
+        contenedorAds.scrollBy({ left:200, behavior: 'smooth' })
     })
 
     function addAds(list) {

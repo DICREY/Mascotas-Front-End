@@ -1,0 +1,50 @@
+@import url("var.css");
+.btn-link {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: var(--lighter-primary);
+    font-size: var(--font-size);
+    text-wrap: nowrap;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid transparent;
+    border-radius: 10px;
+}
+.btn-link i {
+    font-size: var(--font-size2);
+}
+.btn-link:hover {
+    background: rgba(156, 100, 74, 0.274);
+    border-color: var(--white);
+    color: var(--white);
+    transform: translateY(-1px);
+    box-shadow: 0 0 20px;
+    -webkit-box-reflect: below 1px linear-gradient(to bottom,transparent ,rgba(156, 100, 74, 0.274) );
+}
+.btn-link:hover + .deploying,.deploying:hover {
+    display: grid;
+    position: absolute;
+    padding: 10px;
+    width: auto;
+    background: var(--second);
+    list-style: none;
+    text-wrap: nowrap;
+    color: var(--lighter-primary);
+    border-radius: 10px;
+    border: 2px solid var(--lighter-primary);
+    gap: 5px;
+    right: 0%;
+    z-index: 80;
+}
+.deploying {
+    display: none;
+}
+.deploying li {
+    cursor: pointer;
+}

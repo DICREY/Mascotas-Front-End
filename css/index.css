@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+@import url("bem.css");
 @import url("var.css");
 *{
     box-sizing: border-box;
@@ -23,6 +24,7 @@ body {
     background-attachment: fixed;
     overflow: auto;
 }
+/* header */
 header {
     display: flex;
     align-items: center;
@@ -59,6 +61,15 @@ header span ol{
     display: flex;
     list-style: none;
 }
+/* main */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: transparent;
+}
+/* nav */
 .main-search {
     position: relative;
     display: flex;
@@ -92,13 +103,6 @@ header span ol{
 }
 .search:focus + .bx-search-alt {
     color: transparent;
-}
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background: transparent;
 }
 nav {
     position: sticky;
@@ -143,54 +147,7 @@ nav ol {
 nav ol ol li {
     position: relative;
 }
-.btn-link {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 5px 10px;
-    font-weight: bold;
-    color: var(--lighter-primary);
-    font-size: var(--font-size);
-    text-wrap: nowrap;
-    text-decoration: none;
-    text-align: center;
-    border: 2px solid transparent;
-    border-radius: 10px;
-}
-.btn-link i {
-    font-size: var(--font-size2);
-}
-.btn-link:hover {
-    background: rgba(156, 100, 74, 0.274);
-    border-color: var(--white);
-    color: var(--white);
-    transform: translateY(-1px);
-    box-shadow: 0 0 20px;
-    -webkit-box-reflect: below 1px linear-gradient(to bottom,transparent ,rgba(156, 100, 74, 0.274) );
-}
-.btn-link:hover + .deploying,.deploying:hover {
-    display: grid;
-    position: absolute;
-    padding: 10px;
-    width: auto;
-    background: var(--second);
-    list-style: none;
-    text-wrap: nowrap;
-    color: var(--lighter-primary);
-    border-radius: 10px;
-    border: 2px solid var(--lighter-primary);
-    gap: 5px;
-    z-index: 80;
-}
-.deploying {
-    display: none;
-}
-.deploying li {
-    cursor: pointer;
-}
+
 .section-ads-offers {
     position: relative;
     display: flex;
@@ -235,6 +192,7 @@ nav ol ol li {
     scroll-snap-align: center;
     background: var(--card);
 }
+/* card of products */
 .section-products {
     display: flex;
     width: 100%;
@@ -271,6 +229,7 @@ nav ol ol li {
 .productCard button {
     background: var(--card);
 }
+/* footer */
 footer {
     background: var(--second);
     padding: 10px;
@@ -340,6 +299,7 @@ footer {
     border-radius: 10px;
     padding: 0;
 }
+/* dinamyc class */
 .inactive {
     display: none;
 }
