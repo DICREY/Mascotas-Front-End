@@ -115,15 +115,20 @@ main {
     width: 50%;
 }
 .forms-appointment {
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 90%;
+    padding: 15px;
+    top: 10vh;
     gap: 10px;
     border-radius: 10px;
     border: 2px solid var(--cyan);
-    padding: 15px;
+    background: var(--card);
+    box-shadow: 0 0 20px var(--black);
+    z-index: 40;
 }
 .select, .input {
     width: 100%;

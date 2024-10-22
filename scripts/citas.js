@@ -3,17 +3,24 @@ document.addEventListener("DOMContentLoaded",() => {
     const sectionSelectAppointment = document.querySelector("#select-appointment")
     const formRequest = document.querySelector("#form-request-appointment")
     const btnI = document.querySelectorAll("#btn-i")
+    const consultAppointment = document.getElementById("consult-appointment")
+    const requestAppointment = document.getElementById("request-appointment")
     const veterinary = document.querySelector("#veterinary")
     const pets = document.querySelector("#pets")
     const services = document.querySelector("#services")
 
     btnI.forEach(i => i.addEventListener("click",showToggle))
+    requestAppointment.addEventListener("click",showForm)
 
     async function showToggle() {
         setTimeout(() => {
             sectionPrivacy.classList.toggle("inactive")
             sectionSelectAppointment.classList.toggle("inactive")
         },500)
+    }
+
+    function showForm() {
+        formRequest.classList.toggle("inactive")
     }
 
     function optsSelects() {
