@@ -30,7 +30,7 @@
         </span>
     </header>
     <main>
-        <section id="section-privacy" class="section-privacy-notice section">
+        <section id="section-privacy" class="section-privacy-notice section inactive">
             <strong class="title-privacy">Privacy Notice</strong>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae maxime aliquid repellendus deleniti saepe? Asperiores magnam officia sequi in autem eos provident. Recusandae rem repellendus distinctio dicta illo consequatur quod? <br> <br>
             Deleniti odit doloremque quam pariatur. Animi, accusantium natus. Nostrum facilis esse sapiente officiis laudantium ut? Laudantium earum consequatur suscipit delectus quo esse qui necessitatibus fuga! Aliquid officiis perspiciatis reiciendis. Deserunt!
@@ -39,33 +39,46 @@
             </p>
             <strong>¿Do you want to continue scheduling appointments?</strong>
             <span>
-                <button id="btn-i" class="btn-privacy" type="button">Accept</button>
-                <a class="btn-privacy" href="../index.html">Not accept</a>
+                <button id="btn-i" class="btn-accept" type="button">Accept</button>
+                <a class="btn-accept" href="../index.html">Not accept</a>
             </span>
         </section>
-        <section id="select-appointment" class="section inactive">
+        <section id="select-appointment" class="section">
             <aside id="btn-i" class="btn-back">
                 <i class='bx bx-chevron-left'></i>
-                <p>Back</p>
             </aside>
             <strong class="title-select-appointment">Appointment Scheduling</strong>
             <section class="sub-select-appointment">
-                <div>
+                <div id="request-appointment">
                     <img src="" alt="quote aggregation symbol">
                     <span>
-                        <strong>schedule Appointment</strong>
-                        <p></p>
+                        <strong>Request Appointment</strong>
+                        <p>make the request for an appointment</p>
                     </span>
                 </div>
-                <div>
+                <div id="consult-appointment">
                     <img src="" alt="Representative magnifying glass for consulting an appointment">
                     <span>
                         <strong>Consult Appointment</strong>
-                        <p></p>
+                        <p>consult,modify or cancel an appointment</p>
                     </span>
                 </div>
             </section>
-            <a class="btn-privacy" href="../index.html">Not accept</a>
+            <a class="btn-accept" href="../index.html">Leave</a>
+            <form method="post" id="form-request-appointment" class="form-request-appointment forms-appointment">
+                <select class="select" name="veterinary" id="veterinary" required>
+                </select>
+                <select class="select" name="pets" id="pets" required>
+                </select>
+                <select class="select" name="services" id="services" required>
+                </select>
+                <input class="input" type="time" name="" id="">
+                <input class="input" type="date" name="date-appointment" id="date-appointment" required>
+                <button type="button" id="btn-send-appointment" class="btn-accept">Send</button>
+            </form>
+            <form id="form-consult-appointment" class="form-consult-appointment">
+                <input type="text">
+            </form>
         </section>
     </main>
     <footer>

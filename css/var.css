@@ -8,13 +8,13 @@
     --cyan: #008a8a;
     --gray:#8f8f8f7a;
     --gray-lighter:#d6d6d6;
-    --font-size:16px;
-    --font-size2:20px;
-    --font-size-login-title:30px;
-    --font-size-title:20px;
-    --size-icon:34px;
-    --size-icon2:30px;
-    --size-icon-float:22px;
+    --font-size: 1rem;
+    --font-size2:1.25rem;
+    --font-size-login-title:1.8rem;
+    --font-size-title:1.25rem;
+    --size-icon:2.12rem;
+    --size-icon2:1.8rem;
+    --size-icon-float:1.3rem;
     --secundary: #a1d3faaf;
     --lighter-primary:#79a3a3;
     --second: #002727;
@@ -22,32 +22,21 @@
     --background: #e0f1ff;
     --second-background: url("https://github.com/DICREY/Multimedia-Mascotas/blob/main/imgs/iguana_1920x1080_xtrafondos.com.jpg?raw=true") right no-repeat fixed;
 }
+html {
+    font-size: 16px;
+}
 @media (400px < width) {
-    :root {
-        --font-size-title:30px;
-        --font-size:18px;
-        --font-size2:24px;
-        --size-icon2:38px;
-        --size-icon-float:30px;
+    html {
+        font-size: 18px;
     }
 }
 @media (1600px < width) {
-    :root {
-        --font-size-title:52px;
-        --font-size:24px;
-        --font-size2:30px;
-        --size-icon:56px;
-        --size-icon2:48px;
-        --size-icon-float:40px;
+    html {
+        font-size: 24px;
     }
 }
 @media (2800px < width) {
-    :root {
-        --font-size-title:72px;
-        --font-size:34px;
-        --font-size2:38px;
-        --size-icon:100px;
-        --size-icon2:58px;
-        --size-icon-float:56px;
+    html {
+        font-size: 34px;
     }
 }

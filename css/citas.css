@@ -20,7 +20,7 @@ body {
     flex-direction: column;
     height: 100vh;
     width: 100%;
-    background: var(--second-background);
+    background: var(--lighter-primary);
     background-size: cover;
     background-attachment: fixed;
     overflow: auto;
@@ -70,6 +70,7 @@ main {
     place-items: center;
     width: 100%;
     gap: 10px;
+    background: var(--card);
 }
 .section {
     position: relative;
@@ -95,9 +96,46 @@ main {
     width: 100%;
 }
 .sub-select-appointment {
-    display: flex;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    gap: 30px;
 }
-.btn-privacy {
+.sub-select-appointment div {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 10px;
+    font-size: var(--font-size);
+    border: 2px solid var(--white);
+    border-radius: 10px;
+}
+.sub-select-appointment div img {
+    width: 50%;
+}
+.forms-appointment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    gap: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--cyan);
+    padding: 15px;
+}
+.select, .input {
+    width: 100%;
+    padding: 4px 10px;
+    background: var(--cyan);
+    color: var(--white);
+    font-size: var(--font-size);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.btn-accept {
     cursor: pointer;
     padding: 5px 10px;
     border: none;
@@ -105,16 +143,13 @@ main {
     font-weight: bold;
     font-size: var(--font-size);
     text-decoration: none;
-}
-.btn-privacy:hover {
-    filter: brightness(0.8);
-}
-.btn-privacy:nth-child(1),
-.btn-privacy:nth-child(3) {
     background: var(--cyan);
     color: var(--white);
 }
-.btn-privacy:nth-child(2) {
+.btn-accept:hover {
+    filter: brightness(0.8);
+}
+.btn-accept:nth-child(2) {
     background: var(--white);
     color: var(--cyan);
     border: 2px solid;
@@ -122,8 +157,8 @@ main {
 .btn-back {
     cursor: pointer;
     position: absolute;
-    left: 5vw;
-    top: 8%;
+    left:3vw;
+    top: 2%;
     color: var(--cyan);
     font-weight: bold;
     font-size: var(--font-size);
