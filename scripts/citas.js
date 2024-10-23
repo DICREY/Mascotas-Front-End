@@ -61,17 +61,21 @@ document.addEventListener("DOMContentLoaded",() => {
     }
 
     function showDateInput() {
-        const input = document.createElement("input")
-        const p = document.createElement("p")
-
-        p.innerText = list[0]
-
-        input.placeholder = list[3]
-        input.type = list[1]
-        input.className = list[2]
-
-        dateNameAppoint.appendChild(p)
-        dateNameAppoint.appendChild(input)
+        if (dateNameAppoint.firstChild != input) {
+            const input = document.createElement("input")
+            const p = document.createElement("p")
+    
+            p.innerText = list[0]
+    
+            input.placeholder = list[3]
+            input.type = list[1]
+            input.className = list[2]
+    
+            dateNameAppoint.appendChild(p)
+            dateNameAppoint.appendChild(input)
+        } else {
+            return
+        }
     }
 
     function optsSelects() {
