@@ -29,11 +29,11 @@ document.addEventListener("DOMContentLoaded",() => {
     btnBackAppointConsult.addEventListener("click",showFormConsult)
     requestAppointment.addEventListener("click",showFormRequest)
     consultAppointment.addEventListener("click",showFormConsult)
-    btnConsultAppointDate.addEventListener("click",showDateInput(list))
+    btnConsultAppointDate.addEventListener("click",showDateInput)
     // btnConsultAppointPetsName.addEventListener("click",showDateInput(DateName[1]))
     
     // lists 
-    const DateName = ["It Write the date of appointment","date","date-appoint input","Date Appointment"]
+    const list = ["It Write the date of appointment","date","date-appoint input","Date Appointment"]
 
     // functions
     async function showToggle() {
@@ -60,9 +60,7 @@ document.addEventListener("DOMContentLoaded",() => {
         btnI.forEach(i => i.classList.toggle("blur"))
     }
 
-
-    const list = ["It Write the date of appointment","date","date-appoint input","Date Appointment"]
-    function showDateInput(list) {
+    function showDateInput() {
         const input = document.createElement("input")
         const p = document.createElement("p")
 
