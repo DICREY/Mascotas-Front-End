@@ -1,17 +1,35 @@
 document.addEventListener("DOMContentLoaded",() => {
+    // containers
+    const header = document.getElementById("header")
+    const footer = document.getElementById("footer")
     const sectionPrivacy = document.querySelector("#section-privacy")
     const sectionSelectAppointment = document.querySelector("#select-appointment")
+    const sectionAppointments = document.querySelector(".sub-select-appointment")
     const formRequest = document.querySelector("#form-request-appointment")
-    const btnI = document.querySelectorAll("#btn-i")
+    const formConsult = document.querySelector("#form-consult-appointment")
     const consultAppointment = document.getElementById("consult-appointment")
     const requestAppointment = document.getElementById("request-appointment")
+
+    // Etiquetas dinamicas
     const veterinary = document.querySelector("#veterinary")
     const pets = document.querySelector("#pets")
     const services = document.querySelector("#services")
 
+    // Botones
+    const btnI = document.querySelectorAll("#btn-i")
+    const btnBackAppointRequest = document.getElementById("btn-back-appointment")
+    const btnBackAppointConsult = document.getElementById("btn-back-appointment-consult")
+    const btnConsultAppointDate = document.getElementById("consult-appoint-date")
+    const btnConsultAppointPetsName = document.getElementById("consult-appoint-pets-name")
+    
+    // Events 
     btnI.forEach(i => i.addEventListener("click",showToggle))
-    requestAppointment.addEventListener("click",showForm)
-
+    btnBackAppointRequest.addEventListener("click",showFormRequest)
+    btnBackAppointConsult.addEventListener("click",showFormConsult)
+    requestAppointment.addEventListener("click",showFormRequest)
+    consultAppointment.addEventListener("click",showFormConsult)
+    
+    // functions
     async function showToggle() {
         setTimeout(() => {
             sectionPrivacy.classList.toggle("inactive")
@@ -19,8 +37,21 @@ document.addEventListener("DOMContentLoaded",() => {
         },500)
     }
 
-    function showForm() {
+    function showFormRequest() {
         formRequest.classList.toggle("inactive")
+        header.classList.toggle("blur")
+        footer.classList.toggle("blur")
+        formConsult.classList.toggle("blur")
+        sectionAppointments.classList.toggle("blur")
+        btnI.forEach(i => i.classList.toggle("blur"))
+    }
+    function showFormConsult() {
+        formConsult.classList.toggle("inactive")
+        header.classList.toggle("blur")
+        footer.classList.toggle("blur")
+        formRequest.classList.toggle("blur")
+        sectionAppointments.classList.toggle("blur")
+        btnI.forEach(i => i.classList.toggle("blur"))
     }
 
     function optsSelects() {
@@ -99,5 +130,6 @@ document.addEventListener("DOMContentLoaded",() => {
         }
     }
     
+    // Call to functions
     optsSelects()
 })

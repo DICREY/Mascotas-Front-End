@@ -13,7 +13,7 @@
     <title>Appointments Pets Paradise</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <picture>
             <img class="logo-sena" src="https://github.com/DICREY/Multimedia-Mascotas/blob/main/imgs/PetsParadiseLogo.png?raw=true" alt="logoSena">
         </picture>
@@ -29,7 +29,7 @@
             </ol>
         </span>
     </header>
-    <main>
+    <main id="main">
         <section id="section-privacy" class="section-privacy-notice section inactive">
             <strong class="title-privacy">Privacy Notice</strong>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae maxime aliquid repellendus deleniti saepe? Asperiores magnam officia sequi in autem eos provident. Recusandae rem repellendus distinctio dicta illo consequatur quod? <br> <br>
@@ -47,8 +47,8 @@
             <aside id="btn-i" class="btn-back">
                 <i class='bx bx-chevron-left'></i>
             </aside>
-            <strong class="title-select-appointment">Appointment Scheduling</strong>
             <section class="sub-select-appointment">
+                <strong class="title-select-appointment">Appointment Scheduling</strong>
                 <div id="request-appointment">
                     <img src="" alt="quote aggregation symbol">
                     <span>
@@ -63,25 +63,42 @@
                         <p>consult,modify or cancel an appointment</p>
                     </span>
                 </div>
+                <a class="btn-accept" href="../index.html">Leave</a>
             </section>
-            <a class="btn-accept" href="../index.html">Leave</a>
             <form method="post" id="form-request-appointment" class="form-request-appointment forms-appointment inactive">
-                <select class="select" name="veterinary" id="veterinary" required>
-                </select>
-                <select class="select" name="pets" id="pets" required>
-                </select>
-                <select class="select" name="services" id="services" required>
-                </select>
-                <input class="input" type="time" name="" id="">
+                <strong>Request Appointment</strong>
+                <input class="input" type="text" placeholder="Veterinary" list="veterinary">
+                <datalist class="select" name="veterinary" id="veterinary" required>
+                </datalist>
+                <input class="input" type="text" placeholder="Pets" list="pets">
+                <datalist class="select" name="pet" id="pets" required>
+                </datalist>
+                <input class="input" type="text" placeholder="Services" list="services">
+                <datalist class="select" name="service" id="services" required>
+                </datalist>
+                <input class="input" type="time" name="time-appointment" id="time-appointment">
                 <input class="input" type="date" name="date-appointment" id="date-appointment" required>
-                <button type="button" id="btn-send-appointment" class="btn-accept">Send</button>
+                <span>
+                    <button type="button" id="btn-send-appointment" class="btn-accept">Send</button>
+                    <button type="button" id="btn-back-appointment" class="btn-accept">Back</button>
+                </span>
             </form>
-            <form id="form-consult-appointment" class="form-consult-appointment">
-                <input type="text">
+            <form id="form-consult-appointment" class="form-consult-appointment forms-appointment inactive">
+                <strong>Consult Appointment</strong>
+                <span>
+                    <button id="consult-appoint-date" class="btn-accept" type="button">Date Appointment</button>
+                    <button id="consult-appoint-pets-name" class="btn-accept" type="button">Pet's Name</button>
+                </span>
+                <span id="date-name-appointment" class="span-date-name">
+                    <!-- <p>It Write the date of appointment</p> -->
+                </span>
+                    <!-- <p>Type the pet's name to find a appointment</p>
+                    <input class="input" type="text" placeholder="Pet's Name"> -->
+                <button id="btn-back-appointment-consult" class="btn-accept" type="button">Back</button>
             </form>
         </section>
     </main>
-    <footer>
+    <footer id="footer">
         <section class="important footer-section">
             <p class="footer-subtitle">Important
             </p>
