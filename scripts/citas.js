@@ -61,10 +61,9 @@ document.addEventListener("DOMContentLoaded",() => {
     }
 
     function showDateInput() {
-        if (dateNameAppoint.firstChild != input) {
-            const input = document.createElement("input")
-            const p = document.createElement("p")
-    
+        const input = document.createElement("input")
+        const p = document.createElement("p")
+        if (dateNameAppoint.firstChild !== p) {
             p.innerText = list[0]
     
             input.placeholder = list[3]
