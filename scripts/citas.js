@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded",() => {
     const formConsult = document.querySelector("#form-consult-appointment")
     const consultAppointment = document.getElementById("consult-appointment")
     const requestAppointment = document.getElementById("request-appointment")
+    const dateNameAppoint = document.getElementById("date-name-appointment")
 
     // Etiquetas dinamicas
     const veterinary = document.querySelector("#veterinary")
@@ -28,7 +29,12 @@ document.addEventListener("DOMContentLoaded",() => {
     btnBackAppointConsult.addEventListener("click",showFormConsult)
     requestAppointment.addEventListener("click",showFormRequest)
     consultAppointment.addEventListener("click",showFormConsult)
+    btnConsultAppointDate.addEventListener("click",showDateInput(list))
+    // btnConsultAppointPetsName.addEventListener("click",showDateInput(DateName[1]))
     
+    // lists 
+    const DateName = ["It Write the date of appointment","date","date-appoint input","Date Appointment"]
+
     // functions
     async function showToggle() {
         setTimeout(() => {
@@ -52,6 +58,22 @@ document.addEventListener("DOMContentLoaded",() => {
         formRequest.classList.toggle("blur")
         sectionAppointments.classList.toggle("blur")
         btnI.forEach(i => i.classList.toggle("blur"))
+    }
+
+
+    const list = ["It Write the date of appointment","date","date-appoint input","Date Appointment"]
+    function showDateInput(list) {
+        const input = document.createElement("input")
+        const p = document.createElement("p")
+
+        p.innerText = list[0]
+
+        input.placeholder = list[3]
+        input.type = list[1]
+        input.className = list[2]
+
+        dateNameAppoint.appendChild(p)
+        dateNameAppoint.appendChild(input)
     }
 
     function optsSelects() {

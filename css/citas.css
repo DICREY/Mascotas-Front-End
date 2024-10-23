@@ -34,7 +34,7 @@ header {
     padding: 10px;
     width: 100%;
     color: var(--white);
-    z-index: 20;
+    z-index: 40;
 }
 .logo-sena {
     height: 40px;
@@ -68,6 +68,7 @@ main {
     display: grid;
     place-content: center;
     place-items: center;
+    height: 80%;
     width: 100%;
     gap: 10px;
     background: var(--card);
@@ -78,6 +79,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 80vh;
+    width: 100%;
     padding: 20px;
     backdrop-filter: blur(4px);
     font-size: var(--font-size);
@@ -86,6 +89,7 @@ main {
     border-left:2px solid var(--gray);
     box-shadow: 0 0 30px var(--black);
     gap: 15px;
+    z-index: 20;
 }
 .title-privacy,.title-select-appointment {
     font-size: var(--font-size-title);
@@ -121,7 +125,7 @@ main {
     align-items: center;
     justify-content: center;
     width: 90%;
-    padding: 15px;
+    padding: 20px;
     top: 10vh;
     gap: 10px;
     font-size: var(--font-size);
@@ -158,7 +162,7 @@ main {
     appearance: none;
 }
 .input::placeholder {
-    color: var(--white);
+    color: var(--lighter-primary);
 }
 .btn-accept {
     cursor: pointer;
@@ -202,7 +206,7 @@ footer {
     width: 100%;
     height: auto;
     color: var(--lighter-primary);
-    z-index: 20;
+    z-index: 40;
 }
 .footer-section {
     position: relative;
@@ -280,6 +284,7 @@ footer {
     }
     .forms-appointment {
         width: auto;
+        z-index: 80;
     }
     .forms-appointment span:nth-child(2) {
         display: flex;
