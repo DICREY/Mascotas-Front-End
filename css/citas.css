@@ -79,7 +79,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 100%;
     width: 100%;
     padding: 20px;
     backdrop-filter: blur(4px);
@@ -89,6 +89,7 @@ main {
     border-left:2px solid var(--gray);
     box-shadow: 0 0 30px var(--black);
     gap: 15px;
+    overflow: auto;
     z-index: 20;
 }
 .title-privacy,.title-select-appointment {
@@ -160,6 +161,9 @@ main {
     border: none;
     outline: none;
     appearance: none;
+}
+.select {
+    cursor: pointer;
 }
 .input::placeholder {
     color: var(--lighter-primary);
@@ -279,7 +283,7 @@ footer {
     filter: blur(5px);
 }
 @media (700px < width) {
-    .section-privacy-notice {
+    .section {
         width: 50%;
     }
     .forms-appointment {
@@ -290,5 +294,17 @@ footer {
         display: flex;
         gap: 80px;
         padding: 5px;
+    }
+    footer {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        gap: 20px;
+    }
+    .footer-section {
+        width: 25%;
+    }
+    .footer-subtitle::before {
+        height: 0%;
     }
 }
