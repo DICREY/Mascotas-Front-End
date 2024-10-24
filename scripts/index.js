@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded",() => {
-    const products = require('../datas/data')
 
     const btnMenu = document.querySelector(".btn-menu")
     const menuDeploy = document.querySelector(".menu-deploy")
@@ -43,7 +42,18 @@ document.addEventListener("DOMContentLoaded",() => {
         }
     ]
     
-    const productList = new products().find()
+    const productList = [
+        {
+            name: "Croquetas",
+            img: "https://i.pinimg.com/564x/1d/1f/9a/1d1f9a2d6e6927d41551c70e72bd65eb.jpg",
+            price: 5000,
+        },
+        {
+            name: "Bone toy",
+            img: "https://i.pinimg.com/564x/61/79/0b/61790b3731b71c011bb9cc19c7900990.jpg",
+            price: 2000,
+        },
+    ]
 
 
     btnMenu.addEventListener("click",() => {
