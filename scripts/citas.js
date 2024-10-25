@@ -11,12 +11,14 @@ document.addEventListener("DOMContentLoaded",() => {
     const requestAppointment = document.getElementById("request-appointment")
     const dateNameAppoint = document.getElementById("date-name-appointment")
 
-    // Etiquetas dinamicas
+    // Dynamic labels
     const veterinary = document.querySelector("#veterinary")
     const pets = document.querySelector("#pets")
     const services = document.querySelector("#services")
+    const times = document.querySelector("#time-appointment")
+    const date = document.querySelector("#date-appointment")
 
-    // Botones
+    // Btns
     const btnI = document.querySelectorAll("#btn-i")
     const btnBackAppointRequest = document.getElementById("btn-back-appointment")
     const btnBackAppointConsult = document.getElementById("btn-back-appointment-consult")
@@ -29,11 +31,14 @@ document.addEventListener("DOMContentLoaded",() => {
     btnBackAppointConsult.addEventListener("click",showFormConsult)
     requestAppointment.addEventListener("click",showFormRequest)
     consultAppointment.addEventListener("click",showFormConsult)
-    btnConsultAppointDate.addEventListener("click",showDateInput)
-    // btnConsultAppointPetsName.addEventListener("click",showDateInput(DateName[1]))
+    btnConsultAppointDate.addEventListener("click",() => showDateInput(DateName[0]))
+    btnConsultAppointPetsName.addEventListener("click",() => showDateInput(DateName[1]))
     
     // lists 
-    const list = ["It Write the date of appointment","date","date-appoint input","Date Appointment"]
+    const DateName = [
+        ["It Write the date of appointment","date","date-appoint input","Date Appointment"],
+        ["Type the pet's name to find a appointment","text","pets-name input","Pet's Name"]
+    ]
 
     // functions
     async function showToggle() {
@@ -60,21 +65,26 @@ document.addEventListener("DOMContentLoaded",() => {
         btnI.forEach(i => i.classList.toggle("blur"))
     }
 
-    function showDateInput() {
+    function showDateInput(list) {
+        const existP = dateNameAppoint.querySelector("p")
+        const existInput = dateNameAppoint.querySelector("input")
+
+        if (existP || existInput) {
+            dateNameAppoint.removeChild(existP,existInput)
+            dateNameAppoint.removeChild(existInput)
+        }
+
         const input = document.createElement("input")
         const p = document.createElement("p")
-        if (dateNameAppoint.firstChild !== p) {
-            p.innerText = list[0]
-    
-            input.placeholder = list[3]
-            input.type = list[1]
-            input.className = list[2]
-    
-            dateNameAppoint.appendChild(p)
-            dateNameAppoint.appendChild(input)
-        } else {
-            return
-        }
+
+        p.innerText = list[0]
+        p.className = "p"
+        input.placeholder = list[3]
+        input.type = list[1]
+        input.className = list[2]
+        
+        dateNameAppoint.appendChild(p)
+        dateNameAppoint.appendChild(input)
     }
 
     function optsSelects() {
@@ -133,24 +143,47 @@ document.addEventListener("DOMContentLoaded",() => {
                 name: "Consulta de Emergencia"
             },
         ]
-        for (i of listVeterinarys) {
+        let listTimes = [
+            {
+                time: "6am - 7am"
+            },
+            {
+                time: "7am - 8am"
+            },
+            {
+                time: "8am - 9am"
+            },
+            {
+                time: "9am - 10am"
+            },
+            {
+                time: "10am - 11am"
+            },
+        ]
+        listVeterinarys.forEach(i => {
             const opt = document.createElement("option")
             opt.value = i.name
             opt.innerText = i.name + " " + i.lastName
             veterinary.appendChild(opt)
-        }
-        for (i of listPets) {
+        })
+        listPets.forEach(i => {
             const opt = document.createElement("option")
             opt.value = i.name
             opt.innerText = i.name
             pets.appendChild(opt)
-        }
-        for (i of listServices) {
+        })
+        listServices.forEach(i => {
             const opt = document.createElement("option")
             opt.value = i.name
             opt.innerText = i.name 
             services.appendChild(opt)
-        }
+        })
+        listTimes.forEach(i => {
+            const opt = document.createElement("option")
+            opt.value = i.time
+            opt.innerText = i.time
+            times.appendChild(opt)
+        })
     }
     
     // Call to functions

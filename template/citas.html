@@ -15,7 +15,7 @@
 <body>
     <header id="header">
         <picture>
-            <img class="logo-sena" src="https://github.com/DICREY/Multimedia-Mascotas/blob/main/imgs/PetsParadiseLogo.png?raw=true" alt="logoSena">
+            <img class="logo-sena" src="https://github.com/DICREY/Multimedia-Mascotas/blob/main/imgs/PetsParadiseLogo.png?raw=true" alt="dog">
         </picture>
         <p translate="no" class="name-corp">Pets Paradise</p>
         <span>
@@ -30,7 +30,7 @@
         </span>
     </header>
     <main id="main">
-        <section id="section-privacy" class="section-privacy-notice section inactive">
+        <section id="section-privacy" class="section-privacy-notice section">
             <strong class="title-privacy">Privacy Notice</strong>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae maxime aliquid repellendus deleniti saepe? Asperiores magnam officia sequi in autem eos provident. Recusandae rem repellendus distinctio dicta illo consequatur quod? <br> <br>
             Deleniti odit doloremque quam pariatur. Animi, accusantium natus. Nostrum facilis esse sapiente officiis laudantium ut? Laudantium earum consequatur suscipit delectus quo esse qui necessitatibus fuga! Aliquid officiis perspiciatis reiciendis. Deserunt!
@@ -43,7 +43,7 @@
                 <a class="btn-accept" href="../index.html">Not accept</a>
             </span>
         </section>
-        <section id="select-appointment" class="section">
+        <section id="select-appointment" class="section inactive">
             <aside id="btn-i" class="btn-back">
                 <i class='bx bx-chevron-left'></i>
             </aside>
@@ -67,16 +67,15 @@
             </section>
             <form method="post" id="form-request-appointment" class="form-request-appointment forms-appointment inactive">
                 <strong>Request Appointment</strong>
-                <input class="input" type="text" placeholder="Veterinary" list="veterinary">
-                <datalist class="select" name="veterinary" id="veterinary" required>
-                </datalist>
-                <input class="input" type="text" placeholder="Pets" list="pets">
+                <input class="input pets" type="text" placeholder="Pets" list="pets">
                 <datalist class="select" name="pet" id="pets" required>
                 </datalist>
-                <input class="input" type="text" placeholder="Services" list="services">
-                <datalist class="select" name="service" id="services" required>
-                </datalist>
-                <input class="input" type="time" name="time-appointment" id="time-appointment" placeholder="Time Appointment" required>
+                <select class="select" name="veterinary" id="veterinary" required>
+                </select>
+                <select class="select" name="service" id="services" required>
+                </select>
+                <select class="select" name="time-appointment" id="time-appointment" required>
+                </select>
                 <input class="input" type="date" name="date-appointment" id="date-appointment" placeholder="Date-Appointment" required>
                 <span>
                     <button type="button" id="btn-send-appointment" class="btn-accept">Send</button>
