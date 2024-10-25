@@ -41,18 +41,16 @@ form {
     color: var(--second);
     border: 0.1px solid var(--gray);
     border-radius: 10px;
-    box-shadow: 0 0 4px var(--black);
+    box-shadow: 0 0 20px rgba(8, 8, 8, 0.397);
 }
 form h1 {
-    color: var(--second);
     user-select: none;
 }
 form h1:first-child {
     font-weight: 400;
     font-family: "sofia",cursive;
-    text-shadow: 
-        0 5px 3px var(--second),
-        0 3px 3px var(--second);
+    color: var(--white);
+    text-shadow: 0 3px 3px var(--lighter-primary);
 }
 form h1:nth-child(2) {
     width: 100%;

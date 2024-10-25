@@ -33,10 +33,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--secundary);
-    padding: 10px;
     width: 100%;
+    padding: 10px;
+    background: var(--secundary);
     color: var(--lighter-primary);
+    box-shadow: 0 0 20px rgba(8, 8, 8, 0.397);
     z-index: 40;
 }
 .logo-sena {
@@ -61,7 +62,6 @@ main {
     display: grid;
     place-content: center;
     place-items: center;
-    height: 80%;
     width: 100%;
     gap: 10px;
     background: var(--secundary);
@@ -78,8 +78,6 @@ main {
     backdrop-filter: blur(4px);
     font-size: var(--font-size);
     color: var(--second);
-    border:1px solid var(--gray);
-    /* border-left:1px solid var(--gray); */
     box-shadow: 0 0 20px rgba(8, 8, 8, 0.397);
     gap: 15px;
     overflow: auto;
@@ -102,6 +100,7 @@ main {
 .sub-select-appointment div {
     cursor: pointer;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 90%;
     padding: 10px;
@@ -110,7 +109,12 @@ main {
     border-radius: 10px;
 }
 .sub-select-appointment div img {
-    width: 50%;
+    object-fit: cover;
+    object-position: center;
+    width: 30%;
+}
+.consult-appointment img {
+    filter:hue-rotate(240deg) brightness(3);
 }
 .forms-appointment {
     position: fixed;
@@ -148,7 +152,7 @@ main {
     width: 100%;
     padding: 4px 10px;
     background: var(--card);
-    color: var(--second);
+    color: var(--lighter-primary);
     font-size: var(--font-size);
     border-radius: 10px;
     border: none;
@@ -202,6 +206,7 @@ footer {
     padding: 10px;
     width: 100%;
     height: auto;
+    box-shadow: 0 0 20px rgba(8, 8, 8, 0.397);
     color: var(--second);
     z-index: 40;
 }
@@ -276,6 +281,13 @@ footer {
     filter: blur(5px);
 }
 @media (700px < width) {
+    header {
+        padding: 15px;
+    }
+    .logo-sena {
+        height: 60px;
+        width: 60px;
+    }
     .section {
         width: 50%;
     }

@@ -33,8 +33,7 @@ form {
     color: var(--lighter-primary);
     border: 1px solid var(--gray);
     border-radius: 10px;
-    box-shadow: 
-        0 0 20px var(--black);
+    box-shadow: 0 0 20px rgba(8, 8, 8, 0.397);
 }
 form h1:first-child {
     user-select: none;
