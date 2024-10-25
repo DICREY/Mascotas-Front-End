@@ -8,8 +8,11 @@
     outline-color:var(--card);
 }
 ::selection {
-    color: var(--white);
+    color: var(--second);
     background: var(--card);
+}
+:focus {
+    outline: 1px solid var(--lighter-primary);
 }
 body {
     display:flex;
@@ -18,9 +21,7 @@ body {
     flex-direction: column;
     height: 100vh;
     width: 100%;
-    background: var(--second-background);
-    background-attachment: fixed;
-    background-size: cover;
+    background: var(--secundary);
     overflow: auto;
 }
 main {
@@ -37,22 +38,21 @@ form {
     width: 90%;
     padding: 15px;
     gap: 15px;
-    border: 2px solid var(--gray);
+    color: var(--second);
+    border: 0.1px solid var(--gray);
     border-radius: 10px;
-    box-shadow: 0 0 30px var(--black);
-    backdrop-filter: blur(2px);
-    color: var(--white);
+    box-shadow: 0 0 4px var(--black);
 }
 form h1 {
-    color: var(--white);
+    color: var(--second);
     user-select: none;
 }
 form h1:first-child {
     font-weight: 400;
     font-family: "sofia",cursive;
     text-shadow: 
-        0 5px 3px var(--card),
-        0 3px 3px var(--card);
+        0 5px 3px var(--second),
+        0 3px 3px var(--second);
 }
 form h1:nth-child(2) {
     width: 100%;
@@ -77,18 +77,15 @@ form div {
     padding: 5px 20px 5px 5px;
     background: transparent;
     border: none;
-    border-bottom: 2px solid var(--white);
+    border-bottom: 2px solid var(--second);
     outline: none;
     font-size: var(--font-size);
     color: transparent;
     z-index: 2;
     transition: all .2s ease-in-out;
 }
-.input::placeholder {
-    color: var(--white);
-}
 .input:focus {
-    color: var(--white);
+    color: var(--second);
 }
 .input:focus ~ .span-input {
     transform: translateY(-100%);
@@ -105,7 +102,7 @@ form div {
 }
 .link {
     position: relative;
-    color: var(--white);
+    color: var(--second);
     text-decoration: none;
     font-weight: bold;
     font-size: var(--font-size);
@@ -123,7 +120,7 @@ form div {
     width: 0;
     top: 100%;
     left: 50%;
-    background: var(--white);
+    background: var(--second);
     transition: all .2s ease-in-out;
 }
 .link:hover::before {
@@ -135,16 +132,17 @@ form div {
     cursor: pointer;
     padding: 5px 10px;
     width: 100%;
-    color: var(--white);
+    color: var(--black);
     font-size: var(--font-size);
     font-weight: bold;
     border-radius: 10px;
-    border: 2px solid var(--white);
-    background: transparent;
+    border:none;
+    background: var(--second);
     transition: all .2s ease-in-out;
 }
 .btn-send:hover {
-    background: var(--gray);
+    background: var(--lighter-primary);
+    color: var(--secundary);
 }
 .span-register {
     display: flex;

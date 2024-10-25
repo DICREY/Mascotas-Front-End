@@ -15,6 +15,9 @@
     color: var(--white);
     background: var(--card);
 }
+:focus {
+    outline: 1px solid var(--lighter-primary);
+}
 body {
     display:flex;
     flex-direction: column;
@@ -30,10 +33,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--second);
+    background: var(--secundary);
     padding: 10px;
     width: 100%;
-    color: var(--white);
+    color: var(--lighter-primary);
     z-index: 40;
 }
 .logo-sena {
@@ -46,18 +49,8 @@ header {
     font-family: "sofia",cursive;
     font-weight: 400;
     font-size: var(--font-size-title);
-}
-.picture-logo {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background: rgb(230, 220, 199);
-    border: 2px solid var(--lighter-primary);
-}
-.logo {
-    height: auto;
-    width: 50%;
-    border-radius: 10px;
+    color: var(--white);
+    text-shadow: 0 2px 3px var(--lighter-primary);
 }
 header span ol{
     display: flex;
@@ -71,7 +64,7 @@ main {
     height: 80%;
     width: 100%;
     gap: 10px;
-    background: var(--card);
+    background: var(--secundary);
 }
 .section {
     position: relative;
@@ -84,10 +77,10 @@ main {
     padding: 20px;
     backdrop-filter: blur(4px);
     font-size: var(--font-size);
-    color: var(--white);
-    border-right:2px solid var(--gray);
-    border-left:2px solid var(--gray);
-    box-shadow: 0 0 30px var(--black);
+    color: var(--second);
+    border:1px solid var(--gray);
+    /* border-left:1px solid var(--gray); */
+    box-shadow: 0 0 20px rgba(8, 8, 8, 0.397);
     gap: 15px;
     z-index: 20;
 }
@@ -112,7 +105,7 @@ main {
     width: 90%;
     padding: 10px;
     font-size: var(--font-size);
-    border: 2px solid var(--white);
+    border: 2px solid var(--second);
     border-radius: 10px;
 }
 .sub-select-appointment div img {
@@ -130,8 +123,8 @@ main {
     gap: 10px;
     font-size: var(--font-size);
     border-radius: 10px;
-    border: 2px solid var(--cyan);
-    background: var(--card);
+    border: 1px solid var(--gray);
+    background: var(--secundary);
     box-shadow: 0 0 20px var(--black);
     z-index: 40;
 }
@@ -153,8 +146,8 @@ main {
 .select, .input {
     width: 100%;
     padding: 4px 10px;
-    background: var(--cyan);
-    color: var(--white);
+    background: var(--card);
+    color: var(--second);
     font-size: var(--font-size);
     border-radius: 10px;
     border: none;
@@ -172,15 +165,15 @@ main {
     font-weight: bold;
     font-size: var(--font-size);
     text-decoration: none;
-    background: var(--cyan);
+    background: var(--card);
     color: var(--white);
 }
 .btn-accept:hover {
     filter: brightness(0.8);
 }
 .btn-accept:nth-child(2) {
-    background: var(--white);
-    color: var(--cyan);
+    background: var(--secundary);
+    color: var(--lighter-primary);
     border: 2px solid;
 }
 .btn-back {
@@ -188,24 +181,24 @@ main {
     position: absolute;
     left:3vw;
     top: 2%;
-    color: var(--cyan);
+    color: var(--lighter-primary);
     font-weight: bold;
     font-size: var(--font-size);
 }
 .btn-back i {
-    background: var(--white);
-    color: var(--cyan);
-    border: 2px solid var(--cyan);
+    background: var(--secundary);
+    color: var(--lighter-primary);
+    border: 2px solid var(--lighter-primary);
     border-radius: 50%;
     font-size: var(--size-icon2);
 }
 /* footer */
 footer {
-    background: var(--second);
+    background: var(--secundary);
     padding: 10px;
     width: 100%;
     height: auto;
-    color: var(--lighter-primary);
+    color: var(--second);
     z-index: 40;
 }
 .footer-section {
@@ -225,7 +218,6 @@ footer {
     height: 2px;
     width: 100%;
     top: 100%;
-    background: var(--darkcyan);
 }
 .footer-list {
     display: flex;
@@ -236,7 +228,7 @@ footer {
 }
 .footer-btn-link {
     text-decoration:none;
-    color: var(--darkcyan);
+    color: var(--second);
     font-size: var(--font-size);
 }
 .footer-list-data {
@@ -250,7 +242,7 @@ footer {
     cursor: pointer;
     padding: 1px;
     background: transparent;
-    color: var(--lighter-primary);
+    color: var(--second);
     font-size: var(--size-icon);
     border-radius: 1px;
 }
@@ -270,6 +262,7 @@ footer {
     border-radius: 10px;
     padding: 0;
 }
+
 /* dinamyc class */
 .inactive {
     display: none;
@@ -279,6 +272,13 @@ footer {
     filter: blur(5px);
 }
 @media (700px < width) {
+    header {
+        padding: 15px;
+    }
+    .logo-sena {
+        height: 60px;
+        width: 60px;
+    }
     .section-privacy-notice {
         width: 50%;
     }
@@ -290,5 +290,17 @@ footer {
         display: flex;
         gap: 80px;
         padding: 5px;
+    }
+    footer {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        gap: 20px;
+    }
+    .footer-section {
+        width: 25%;
+    }
+    .footer-subtitle::before {
+        height: 0%;
     }
 }
