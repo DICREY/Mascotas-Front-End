@@ -69,16 +69,19 @@
                 <strong>Request Appointment</strong>
                 <input class="input pets" type="text" placeholder="Pets" list="pets">
                 <datalist class="select" name="pet" id="pets" required>
+                    <option value="" selected>-- Select --</option>
                 </datalist>
                 <select class="select" name="veterinary" id="veterinary" required>
+                    <option value="" selected>-- Select --</option>
                 </select>
                 <select class="select" name="service" id="services" required>
+                    <option value="" selected>-- Select --</option>
                 </select>
-                <select class="select" name="time-appointment" id="time-appointment" required>
-                </select>
-                <input class="input" type="date" name="date-appointment" id="date-appointment" placeholder="Date-Appointment" required>
+                <!-- <select class="select" name="time-appointment" id="time-appointment" required>
+                    <option value="" selected>-- Select --</option>
+                </select> -->
                 <span>
-                    <button type="button" id="btn-send-appointment" class="btn-accept">Send</button>
+                    <button type="button" id="btn-next-appointment" class="btn-accept">Next</button>
                     <button type="button" id="btn-back-appointment" class="btn-accept">Back</button>
                 </span>
             </form>
