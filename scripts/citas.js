@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded",() => {
     ]
 
     // functions
-    async function showToggle() {
+    function showToggle() {
         setTimeout(() => {
             sectionPrivacy.classList.toggle("inactive")
             sectionSelectAppointment.classList.toggle("inactive")

@@ -1,12 +1,15 @@
 document.addEventListener("DOMContentLoaded",() => {
-
-    const btnMenu = document.querySelector(".btn-menu")
+    // containers 
     const menuDeploy = document.querySelector(".menu-deploy")
-    const btnScrollLeft = document.querySelector(".bx-chevron-left")
-    const btnScrollRight = document.querySelector(".bx-chevron-right")
     const contenedorAds = document.querySelector(".ads-offers")
     const sectionProducts = document.querySelector(".section-products")
 
+    // btns 
+    const btnMenu = document.querySelector(".btn-menu")
+    const btnScrollLeft = document.querySelector(".bx-chevron-left")
+    const btnScrollRight = document.querySelector(".bx-chevron-right")
+
+    // arrays 
     const adsList = [
         {
         url: "https://i.pinimg.com/564x/b2/7d/2d/b27d2d22ab6b6c7d9e7dfd862d607786.jpg",
@@ -55,7 +58,7 @@ document.addEventListener("DOMContentLoaded",() => {
         },
     ]
 
-
+    // Events 
     btnMenu.addEventListener("click",() => {
         if (btnMenu.className === "bx bx-x btn-menu"){
             btnMenu.className = "bx bx-menu btn-menu"
@@ -74,6 +77,7 @@ document.addEventListener("DOMContentLoaded",() => {
         contenedorAds.scrollBy({ left:200, behavior: 'smooth' })
     })
 
+    // functions
     function addAds(list) {
         for (let i of list){
             const ads = document.createElement("img")
@@ -107,6 +111,7 @@ document.addEventListener("DOMContentLoaded",() => {
         }
     }
 
+    // All functions 
     addAds(adsList)
     addProducts(productList)
 })
