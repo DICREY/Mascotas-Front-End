@@ -16,7 +16,7 @@
 </head>
 <body>
     <main>
-        <form>
+        <form id="form-login">
             <h1 class="name-corp" translate="no">Pets Paradise</h1>
             <h1 translate="no">Login</h1>
             <div>
@@ -29,12 +29,33 @@
                 <i class='bx bx-lock icon i-password'></i>
                 <span class="span-input password">Password</span>
             </div>
-            <a class="link" href="#">¿Do you forgot password?</a>
+            <a id="forgot-password" class="link" href="#">¿Do you forgot password?</a>
             <button class="btn-send" type="submit">Send</button>
             <span class="span-register">
                 <p>¿you don't have account?</p>
                 <a class="link" href="../template/register.html">Register</a>
             </span>
+        </form>
+        <form id="form-data-password" class="inactive">
+            <h1 class="name-corp" translate="no">Pets Paradise</h1>
+            <h1 translate="no">Remember Password</h1>
+            <div>
+                <input id="email-forgot" name="email" class="input email" type="email" required>
+                <i class='bx bxs-user icon'></i>
+                <span class="span-input email">Email</span>
+            </div>
+            <div>
+                <input id="name-forgot" name="name" class="input email" type="text" required>
+                <i class='bx bxs-user icon'></i>
+                <span class="span-input email">Name</span>
+            </div>
+            <div>
+                <input id="password-forgot" name="password" class="input password" type="password" required>
+                <i class='bx bx-lock icon i-password'></i>
+                <span class="span-input password">Last Password</span>
+            </div>
+            <button id="send-new-password" class="btn-send" type="button">Send</button>
+            <a id="remember-password" class="link" href="">¿Remember do you password?</a>
         </form>
     </main>
     <script src="../scripts/login.js"></script>

@@ -1,3 +1,4 @@
+/* import fonts, vars and designs */
 @import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
 @import url("bem.css");
 @import url("var.css");
@@ -271,15 +272,15 @@ footer {
     border-radius: 10px;
     padding: 0;
 }
-
-/* dinamyc class */
+/* dynamic class */
 .inactive {
     display: none;
-    scale: 0.1;
 }
 .blur {
     filter: blur(5px);
 }
+
+/* media querys */
 @media (700px < width) {
     header {
         padding: 15px;
