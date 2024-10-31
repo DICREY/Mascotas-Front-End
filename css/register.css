@@ -31,7 +31,7 @@ form {
     width: 80vw;
     padding: 15px;
     gap: 8px;
-    color: var(--lighter-primary);
+    color: var(--second);
     border: 1px solid var(--gray);
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(8, 8, 8, 0.397);
@@ -44,7 +44,7 @@ form h1:first-child {
     text-shadow: 0 3px 3px var(--lighter-primary);
 }
 form h1:nth-child(2) {
-    color: var(--lighter-primary);
+    color: var(--second);
     width: 100%;
 }
 .sections {
@@ -78,15 +78,15 @@ form span {
     padding: 5px 20px 5px 0px;
     background: transparent;
     border: none;
-    border-bottom: 2px solid var(--lighter-primary);
+    border-bottom: 2px solid var(--second);
     outline: none;
     font-size: var(--font-size);
-    color: var(--lighter-primary);
+    color: var(--second);
     z-index: 1;
     transition: all .2s ease-in-out;
 }
 .input::placeholder {
-    color: var(--lighter-primary);
+    color: var(--second);
 }
 input[type="checkbox"] {
     cursor: pointer;
@@ -97,7 +97,7 @@ input[type="checkbox"] {
     font-size: var(--font-size2);
     right: 1%;
     bottom: 10%;
-    color: var(--lighter-primary);
+    color: var(--second);
     z-index: 20;
     transition: all .2s ease-in-out;
 }
@@ -113,7 +113,7 @@ input[type="checkbox"] {
     font-weight: bold;
     border-radius: 10px;
     border: none;
-    background: var(--lighter-primary);
+    background: var(--second);
     transition: all .2s ease-in-out;
 }
 .btn-send:hover {
@@ -123,7 +123,7 @@ input[type="checkbox"] {
 .link {
     cursor: pointer;
     position: relative;
-    color: var(--lighter-primary);
+    color: var(--second);
     text-decoration: none;
     font-weight: bold;
     font-size: var(--font-size);
@@ -136,7 +136,7 @@ input[type="checkbox"] {
     width: 0;
     top: 100%;
     left: 50%;
-    background: var(--lighter-primary);
+    background: var(--second);
     transition: all .2s ease-in-out;
 }
 .link:hover::before {
