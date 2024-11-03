@@ -2,21 +2,24 @@ document.addEventListener("DOMContentLoaded",() => {
     // containers
     const header = document.getElementById("header")
     const footer = document.getElementById("footer")
-    const sectionPrivacy = document.querySelector("#section-privacy")
-    const sectionSelectAppointment = document.querySelector("#select-appointment")
-    const sectionAppointments = document.querySelector(".sub-select-appointment")
-    const formRequest = document.querySelector("#form-request-appointment")
-    const formConsult = document.querySelector("#form-consult-appointment")
+    const sectionPrivacy = document.getElementById("section-privacy")
+    const sectionSelectAppointment = document.getElementById("select-appointment")
+    const sectionAppointments = document.getElementById("sub-select-appointment")
+    const sectionAppointmentCalendar = document.getElementById("section-appointment-data")
+    const sectionAppointmentInputs = document.getElementById("section-appointment-inputs")
+    const formRequest = document.getElementById("form-request-appointment")
+    const formConsult = document.getElementById("form-consult-appointment")
     const consultAppointment = document.getElementById("consult-appointment")
     const requestAppointment = document.getElementById("request-appointment")
     const dateNameAppoint = document.getElementById("date-name-appointment")
+    const daysContainer = document.getElementById("month-days")
 
     // Dynamic labels
-    const veterinary = document.querySelector("#veterinary")
-    const pets = document.querySelector("#pets")
-    const services = document.querySelector("#services")
-    const times = document.querySelector("#time-appointment")
-    const date = document.querySelector("#date-appointment")
+    const veterinary = document.getElementById("veterinary")
+    const pets = document.getElementById("pets")
+    const services = document.getElementById("services")
+    const times = document.getElementById("time-appointment")
+    const monthYear = document.getElementById("month-year")
 
     // Btns
     const btnI = document.querySelectorAll("#btn-i")
@@ -24,21 +27,27 @@ document.addEventListener("DOMContentLoaded",() => {
     const btnBackAppointConsult = document.getElementById("btn-back-appointment-consult")
     const btnConsultAppointDate = document.getElementById("consult-appoint-date")
     const btnConsultAppointPetsName = document.getElementById("consult-appoint-pets-name")
+    const btnNextAppointmentRequest = document.getElementById("btn-next-appointment")
+    const btnPrevMonth = document.getElementById("prev-month")
+    const btnNextMonth = document.getElementById("next-month")
+    const dayAppointment =  document.querySelectorAll(".available")
     
     // Events 
     btnI.forEach(i => i.addEventListener("click",showToggle))
+    dayAppointment.forEach(i => i.addEventListener("click",addDayAppointment))
     btnBackAppointRequest.addEventListener("click",showFormRequest)
     btnBackAppointConsult.addEventListener("click",showFormConsult)
     requestAppointment.addEventListener("click",showFormRequest)
     consultAppointment.addEventListener("click",showFormConsult)
     btnConsultAppointDate.addEventListener("click",() => showDateInput(DateName[0]))
     btnConsultAppointPetsName.addEventListener("click",() => showDateInput(DateName[1]))
+    btnPrevMonth.addEventListener("click",prevMonthCalendar)
+    btnNextMonth.addEventListener("click",nextMonthCalendar)
+    btnNextAppointmentRequest.addEventListener("click",showSectionFormRequest)
     
-    // lists 
-    const DateName = [
-        ["It Write the date of appointment","text","date-appoint input","Date Appointment"],
-        ["It Write the pet's name to find a appointment","text","pets-name input","Pet's Name"]
-    ]
+    // Vars 
+    let currentYear = new Date().getFullYear()
+    let currentMonth = new Date().getMonth()
 
     // functions
     function showToggle() {
@@ -65,12 +74,24 @@ document.addEventListener("DOMContentLoaded",() => {
         btnI.forEach(i => i.classList.toggle("blur"))
     }
 
+    function showSectionFormRequest() {
+        sectionAppointmentCalendar.classList.toggle("inactive")
+        sectionAppointmentInputs.classList.toggle("inactive")   
+    }
+
+    function addDayAppointment() {
+        // const p = document.createElement('p')
+        // p.innerHTML = `${day}/${currentMonth}/${currentYear}`
+        // sectionAppointmentCalendar.appendChild(p)
+        alert("asdkakhsd")
+    }
+
     function showDateInput(list) {
         const existP = dateNameAppoint.querySelector("p")
         const existInput = dateNameAppoint.querySelector("input")
 
         if (existP || existInput) {
-            dateNameAppoint.removeChild(existP,existInput)
+            dateNameAppoint.removeChild(existP)
             dateNameAppoint.removeChild(existInput)
         }
 
@@ -87,79 +108,25 @@ document.addEventListener("DOMContentLoaded",() => {
         dateNameAppoint.appendChild(input)
     }
 
+    function prevMonthCalendar() {
+        --currentMonth
+        if (currentMonth < 0) {
+            --currentYear
+            currentMonth = 11
+        }
+        renderCalendar()
+    }
+
+    function nextMonthCalendar() {
+        ++currentMonth
+        if (currentMonth > 11) {
+            ++currentYear
+            currentMonth = 0
+        }
+        renderCalendar()
+    }
+
     function optsSelects() {
-        let listVeterinarys = [
-            {
-                name: "Luis",
-                lastName: "Rodríguez"
-            },
-            {
-                name: "Carlos",
-                lastName: "Martínez"
-            },
-            {
-                name: "Daniel",
-                lastName: "Jiménez"
-            },
-            {
-                name: "Camila",
-                lastName: "Reyes"
-            },
-        ]
-        let listPets = [
-            {
-                name: "Sammy"
-            },
-            {
-                name: "Rocky"
-            },
-            {
-                name: "Max"
-            },
-            {
-                name: "Simba"
-            },
-        ]
-        let listServices = [
-            {
-                name: "Vacunación"
-            },
-            {
-                name: "Consulta Veterinaria General"
-            },
-            {
-                name: "Desparasitación"
-            },
-            {
-                name: "Limpieza Dental"
-            },
-            {
-                name: "Baño y Corte de Pelo"
-            },
-            {
-                name: "Cirugía Menor"
-            },
-            {
-                name: "Consulta de Emergencia"
-            },
-        ]
-        let listTimes = [
-            {
-                time: "6am - 7am"
-            },
-            {
-                time: "7am - 8am"
-            },
-            {
-                time: "8am - 9am"
-            },
-            {
-                time: "9am - 10am"
-            },
-            {
-                time: "10am - 11am"
-            },
-        ]
         listVeterinarys.forEach(i => {
             const opt = document.createElement("option")
             opt.value = i.name
@@ -168,24 +135,40 @@ document.addEventListener("DOMContentLoaded",() => {
         })
         listPets.forEach(i => {
             const opt = document.createElement("option")
-            opt.value = i.name
-            opt.innerText = i.name
+            opt.value = i
+            opt.innerText = i
             pets.appendChild(opt)
         })
         listServices.forEach(i => {
             const opt = document.createElement("option")
-            opt.value = i.name
-            opt.innerText = i.name 
+            opt.value = i
+            opt.innerText = i
             services.appendChild(opt)
         })
-        listTimes.forEach(i => {
-            const opt = document.createElement("option")
-            opt.value = i.time
-            opt.innerText = i.time
-            times.appendChild(opt)
-        })
+    }
+
+    function renderCalendar() {
+        const firsthDayOfMonth = new Date(currentYear,currentMonth, 0).getDay()
+        const daysInMonth = new Date(currentYear,currentMonth + 1, 0).getDate()
+
+        monthYear.textContent = `${months[currentMonth]} ${currentYear}`
+        daysContainer.innerText = ""
+
+        for (let i = 0; i < firsthDayOfMonth; i++) daysContainer.innerHTML += `<span></span>`
+        for (let day = 1; day <= daysInMonth; day++) {
+            const span = document.createElement("span")
+
+            span.innerText = day
+            daysAvailable.forEach(i => {
+                if(i.month === months[currentMonth] && i.year === currentYear) {
+                    if (i.days.includes(day)) span.classList.add("available")
+                }
+            })
+            daysContainer.appendChild(span)
+        }
     }
     
     // Call to functions
+    renderCalendar()
     optsSelects()
 })

@@ -22,11 +22,9 @@
 body {
     display:flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;
     background: var(--lighter-primary);
-    background-size: cover;
-    background-attachment: fixed;
     overflow: auto;
 }
 /* header */
@@ -63,6 +61,7 @@ main {
     display: grid;
     place-content: center;
     place-items: center;
+    min-height: 90%;
     width: 100%;
     gap: 10px;
     background: var(--secundary);
@@ -117,6 +116,47 @@ main {
 .request-appointment img {
     padding: 5px;
     filter: hue-rotate(270deg) brightness(1.2);
+}
+.section-appointment-calendar section {
+    border: 1px solid;
+    width: 100%;
+}
+.months {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--card);
+    padding: 3px;
+    border: 1px solid var(--gray);
+    width: 100%;
+}
+.btn-calendar {
+    cursor: pointer;
+    color: var(--white);
+    font-size: var(--font-size2);
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+}
+.btn-calendar i {
+    border-radius: 50%;
+}
+.month-year {
+    padding: 2px;
+    font-weight: bold;
+    color: var(--white);
+}
+.week-days,.month-days {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    padding: 5px;
+    font-weight: bold;
+}
+.month-days span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
 }
 .consult-appointment img {
     filter:hue-rotate(240deg) brightness(3);
@@ -291,7 +331,15 @@ footer {
 .blur {
     filter: blur(5px);
 }
-
+.available {
+    cursor: pointer;
+    color: var(--lighter-primary);
+    border: 1px solid var(--card);
+}
+.available:hover {
+    background: var(--card);
+    color: var(--white);
+}
 /* media querys */
 @media (700px < width) {
     header {
@@ -305,10 +353,11 @@ footer {
         width: 50%;
     }
     .forms-appointment {
+        position: fixed;
         width: auto;
         z-index: 80;
     }
-    .forms-appointment span:nth-child(2) {
+    .btns-appoint {
         display: flex;
         gap: 80px;
         padding: 5px;
