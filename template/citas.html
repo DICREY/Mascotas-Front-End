@@ -30,7 +30,7 @@
         </span>
     </header>
     <main id="main">
-        <section id="section-privacy" class="section-privacy-notice section">
+        <section id="section-privacy" class="section-privacy-notice section inactive">
             <strong class="title-privacy">Privacy Notice</strong>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae maxime aliquid repellendus deleniti saepe? Asperiores magnam officia sequi in autem eos provident. Recusandae rem repellendus distinctio dicta illo consequatur quod? <br> <br>
             Deleniti odit doloremque quam pariatur. Animi, accusantium natus. Nostrum facilis esse sapiente officiis laudantium ut? Laudantium earum consequatur suscipit delectus quo esse qui necessitatibus fuga! Aliquid officiis perspiciatis reiciendis. Deserunt!
@@ -43,14 +43,14 @@
                 <a class="btn-accept" href="../index.html">Not accept</a>
             </span>
         </section>
-        <section id="select-appointment" class="section inactive">
+        <section id="select-appointment" class="section">
             <aside id="btn-i" class="btn-back">
                 <i class='bx bx-chevron-left'></i>
             </aside>
             <section class="sub-select-appointment">
                 <strong class="title-select-appointment">Appointment Scheduling</strong>
-                <div id="request-appointment">
-                    <img src="" alt="quote aggregation symbol">
+                <div id="request-appointment" class="request-appointment">
+                    <img src="https://github.com/DICREY/Multimedia-Mascotas/blob/main/imgs/calendario.png?raw=true" alt="quote aggregation symbol">
                     <span>
                         <strong>Request Appointment</strong>
                         <p>make the request for an appointment</p>
@@ -67,19 +67,25 @@
             </section>
             <form method="post" id="form-request-appointment" class="form-request-appointment forms-appointment inactive">
                 <strong>Request Appointment</strong>
-                <input class="input pets" type="text" placeholder="Pets" list="pets">
-                <datalist class="select" name="pet" id="pets" required>
-                    <option value="" selected>-- Select --</option>
-                </datalist>
-                <select class="select" name="veterinary" id="veterinary" required>
-                    <option value="" selected>-- Select --</option>
-                </select>
-                <select class="select" name="service" id="services" required>
-                    <option value="" selected>-- Select --</option>
-                </select>
-                <!-- <select class="select" name="time-appointment" id="time-appointment" required>
-                    <option value="" selected>-- Select --</option>
-                </select> -->
+                <span class="span-input">
+                    <p>Name Pets</p>
+                    <input class="input pets" type="text" placeholder="Pets" list="pets">
+                    <datalist class="select" name="pet" id="pets" required>
+                        <option value="" selected>-- Select --</option>
+                    </datalist>
+                </span>
+                <span class="span-input">
+                    <p>Veterinary</p>
+                    <select class="select" name="veterinary" id="veterinary" required>
+                        <option value="" selected>-- Select --</option>
+                    </select>
+                </span>
+                <span class="span-input">
+                    <p>Service</p>
+                    <select class="select" name="service" id="services" required>
+                        <option value="" selected>-- Select --</option>
+                    </select>
+                </span>
                 <span>
                     <button type="button" id="btn-next-appointment" class="btn-accept">Next</button>
                     <button type="button" id="btn-back-appointment" class="btn-accept">Back</button>
@@ -87,7 +93,8 @@
             </form>
             <form id="form-consult-appointment" class="form-consult-appointment forms-appointment inactive">
                 <strong>Consult Appointment</strong>
-                <span>
+                <p>¿How to search an appointment?</p>
+                <span class="btns-appoint">
                     <button id="consult-appoint-date" class="btn-accept" type="button">Date Appointment</button>
                     <button id="consult-appoint-pets-name" class="btn-accept" type="button">Pet's Name</button>
                 </span>

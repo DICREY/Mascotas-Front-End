@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded",() => {
     // lists 
     const DateName = [
         ["It Write the date of appointment","text","date-appoint input","Date Appointment"],
-        ["Type the pet's name to find a appointment","text","pets-name input","Pet's Name"]
+        ["It Write the pet's name to find a appointment","text","pets-name input","Pet's Name"]
     ]
 
     // functions

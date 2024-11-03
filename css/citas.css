@@ -114,6 +114,10 @@ main {
     object-position: center;
     width: 30%;
 }
+.request-appointment img {
+    padding: 5px;
+    filter: hue-rotate(270deg) brightness(1.2);
+}
 .consult-appointment img {
     filter:hue-rotate(240deg) brightness(3);
 }
@@ -137,11 +141,19 @@ main {
 .forms-appointment strong {
     font-size: var(--font-size-login-title);
 }
-.forms-appointment span:nth-child(2) {
+.btns-appoint {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+}
+.span-input {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
 }
 .span-date-name {
     display: flex;
