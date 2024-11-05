@@ -8,7 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="description" content="">
-    <meta name="keywords" content="">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="https://github.com/DICREY/Multimedia-Mascotas/blob/main/imgs/PetsParadiseLogo.png?raw=true" type="image/x-icon">
     <link rel="stylesheet" href="../css/login.css">
@@ -20,17 +19,18 @@
             <h1 class="name-corp" translate="no">Pets Paradise</h1>
             <h1 translate="no">Login</h1>
             <div>
-                <input name="email" class="input email" type="email" required>
+                <input id="email" name="email" class="input email" type="email" required>
                 <i class='bx bxs-user icon'></i>
                 <span class="span-input email">Email</span>
             </div>
             <div>
-                <input name="password" class="input password" type="password" required>
+                <input id="password" name="password" class="input password" type="password" required>
                 <i class='bx bx-lock icon i-password'></i>
                 <span class="span-input password">Password</span>
             </div>
+            <p id="message" class="message"></p>
             <a id="forgot-password" class="link" href="#">¿Do you forgot password?</a>
-            <button class="btn-send" type="submit">Send</button>
+            <button id="btn-send" class="btn-send" type="button">Send</button>
             <span class="span-register">
                 <p>¿you don't have account?</p>
                 <a class="link" href="../template/register.html">Register</a>
@@ -57,7 +57,13 @@
             <button id="send-new-password" class="btn-send" type="button">Send</button>
             <a id="remember-password" class="link" href="">¿Remember do you password?</a>
         </form>
+        <span class="btn-home">
+            <a href="../index.html">
+                <i class='bx bx-home'></i>
+            </a>
+        </span>
     </main>
+    <script src="../scripts/arrays.js"></script>
     <script src="../scripts/login.js"></script>
 </body>
 </html>

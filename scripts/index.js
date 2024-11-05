@@ -1,11 +1,14 @@
 document.addEventListener("DOMContentLoaded",() => {
     // containers 
-    const menuDeploy = document.querySelector(".menu-deploy")
-    const contenedorAds = document.querySelector(".ads-offers")
-    const sectionProducts = document.querySelector(".section-products")
+    const contenedorAds = document.getElementById("ads-offers")
+    const sectionProducts = document.getElementById("section-products")
+    
+    // Dynamic Labels 
+    const menuDeploy = document.getElementById("menu-deploy")
+    const ShopingCart = document.getElementById("Shoping-Cart")
 
     // btns 
-    const btnMenu = document.querySelector(".btn-menu")
+    const btnMenu = document.getElementById("btn-menu")
     const btnScrollLeft = document.querySelector(".bx-chevron-left")
     const btnScrollRight = document.querySelector(".bx-chevron-right")
 
@@ -21,22 +24,33 @@ document.addEventListener("DOMContentLoaded",() => {
     })
 
     btnScrollLeft.addEventListener("click",() => {
-        contenedorAds.scrollBy({ left:-200, behavior: 'smooth' })
+        sectionProducts.scrollBy({ left:-200, behavior: 'smooth' })
     })
 
     btnScrollRight.addEventListener("click",() => {
-        contenedorAds.scrollBy({ left:200, behavior: 'smooth' })
+        sectionProducts.scrollBy({ left:200, behavior: 'smooth' })
     })
 
     // functions
-    function addAds(list) {
-        for (let i of list){
+    function addAds() {
+        for (let i of adsList){
             const ads = document.createElement("img")
             ads.src = i.url
             ads.alt = i.name
             ads.title = i.name
             contenedorAds.appendChild(ads)
         }
+
+        let scrollAmount = 0
+        let leftScroll = 200
+        const scrollInterval = setInterval(() => {
+            contenedorAds.scrollBy({ left: leftScroll, behavior: 'smooth' })
+            scrollAmount += leftScroll
+            if (scrollAmount > (200 + (contenedorAds.scrollWidth - contenedorAds.clientWidth))) {
+                contenedorAds.scrollTo({ left: 0, behavior: 'smooth' })
+                scrollAmount = 0
+            }
+        },0)
     }
 
     function addProducts(list) {
@@ -63,6 +77,7 @@ document.addEventListener("DOMContentLoaded",() => {
     }
 
     // All functions 
-    addAds(adsList)
+    addAds()
     addProducts(productList)
+
 })

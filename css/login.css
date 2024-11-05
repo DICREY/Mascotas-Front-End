@@ -100,6 +100,10 @@ form div {
 .i-password {
     cursor: pointer;
 }
+.message {
+    color: var(--red);
+    font-weight: normal;
+}
 .link {
     position: relative;
     color: var(--second);

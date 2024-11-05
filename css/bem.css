@@ -50,3 +50,23 @@
 .deploying li {
     cursor: pointer;
 }
+.btn-home a{
+    text-decoration: none;
+}
+.btn-home a i {
+    position: fixed;
+    padding: 5px;
+    bottom: 5vh;
+    right: 5vw;
+    color: var(--second);
+    font-size: var(--size-icon2);
+    border: 2px solid var(--second);
+    border-radius: 50%;
+    background: var(--card);
+    transition: all .3s ease-in-out;
+}
+.btn-home a i:hover {
+    color: var(--white);
+    border-color: var(--white);
+    box-shadow: 0 0 5px var(--second);
+}

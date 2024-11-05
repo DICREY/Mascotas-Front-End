@@ -2,8 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="sitio Web en línea diseñado para ofrecer recursos, productos, y 
+    servicios dedicados al cuidado y bienestar de animales domésticos, Además proporcionamos acceso a servicios 
+    profesionales como consultas veterinarias, peluquería entre otras. Nuestro objetivo es facilitar a los dueños de 
+    mascotas todo lo necesario para asegurar una vida feliz y saludable para sus compañeros animales.">
+    <meta name="keywords" content="Tienda de mascotas en línea,Cuidado de mascotas,
+    Productos para mascotas,Alimentos para mascotas,Accesorios para mascotas,
+    Cuidados de perros y gatos,Servicios para mascotas,Juguetes para mascotas,
+    Peluquería canina,Higiene para mascotas,Ropa para mascotas,Mascotas exóticas,Salud de animales domésticos">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -29,6 +35,9 @@
                 </li>
                 <li>
                     <a class="btn-link" href="#"><i class='bx bx-cart-alt'></i>Cart</a>
+                    <ol id="Shoping-Cart" class="deploying">
+                        <li></li>
+                    </ol>
                 </li>
             </ol>
         </span>
@@ -41,18 +50,11 @@
                     <i class='bx bx-search-alt'></i>
                 </span>
                 <span class="span-btn-menu">
-                    <i class='bx bx-menu btn-menu'></i>
+                    <i id="btn-menu" class='bx bx-menu btn-menu'></i>
                 </span>
-                <ol class="menu-deploy inactive">
+                <ol id="menu-deploy" class="menu-deploy inactive">
                     <li><a class="btn-link" href="./template/citas.html">Citas</a></li>
-                    <li><a class="btn-link" href="#">Services</a>
-                        <ol class="deploying">
-                            <li><a class="btn-link" href="#">General Cleaning</a></li>
-                            <li><a class="btn-link" href="#">Consultation</a></li>
-                            <li><a class="btn-link" href="#">
-                                Treatment</a></li>
-                        </ol>
-                    </li>
+                    <li><a class="btn-link" href="#">Services</a></li>
                     <li><a class="btn-link" href="#">Dogs</a>
                         <ol class="deploying">
                             <li><a class="btn-link" href="#">Foods</a></li>
@@ -103,12 +105,12 @@
             </ol>
         </nav>
         <section class="section-ads-offers">
-            <i class='bx bx-chevron-left btn-ads'></i>
-            <picture class="ads-offers">
+            <picture id="ads-offers" class="ads-offers">
             </picture>
-            <i class='bx bx-chevron-right btn-ads'></i>
         </section>
-        <section class="section-products">
+        <section id="section-products" class="section-products">
+            <i class='bx bx-chevron-left btn-ads'></i>
+            <i class='bx bx-chevron-right btn-ads'></i>
         </section>
     </main>
     <footer>

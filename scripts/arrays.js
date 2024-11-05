@@ -9,6 +9,10 @@ const adsList = [
         name:"Dog",
     },
     {
+        url: "https://i.pinimg.com/236x/4b/38/ca/4b38ca45c95c29710d4464c4641ef2f5.jpg",
+        name: "Cat with Flow"
+    },
+    {
         url: "https://i.pinimg.com/564x/00/43/65/004365dafc00aafb10554d5ce5e07133.jpg",
         name:"DogFlow",
     },
@@ -25,30 +29,54 @@ const adsList = [
         name:"ParejaGatosFranceses",
     },
     {
-        url:"https://i.pinimg.com/564x/e7/d3/93/e7d3938170a39009b9c05045c8f0186b.jpg",
-        name:"Raton con sombrero",
-    },
-    {
         url:"https://i.pinimg.com/564x/c6/da/13/c6da1347910ea85e0530573c8e4c2b6f.jpg",
         name:"Dog Happy",
+    },
+    {
+        url: "https://i.pinimg.com/236x/e8/1d/9f/e81d9f2306439a6a9f5cf76ccba77dba.jpg",
+        name:"Rapper Dog"
+    },
+    {
+        url: "https://i.pinimg.com/236x/9e/eb/ba/9eebba971101f37513d646780f513349.jpg",
+        name: "Potter Dog"
     }
 ]
 
 const productList = [
     {
-        name: "Croquetas",
+        name: "Dog Dish",
         img: "https://i.pinimg.com/564x/1d/1f/9a/1d1f9a2d6e6927d41551c70e72bd65eb.jpg",
         price: 5000,
     },
     {
-        name: "Bone toy",
+        name: "Rubber Bone",
         img: "https://i.pinimg.com/564x/61/79/0b/61790b3731b71c011bb9cc19c7900990.jpg",
-        price: 2000,
+        price: 3000,
     },
     {
-        name: "Necklace",
+        name: "Cyan Necklace",
         img: "https://i.pinimg.com/564x/8f/b2/25/8fb2258fa4e5b5ca702d16a851e63cd2.jpg",
         price: 10000,
+    },
+    {
+        name: "Dog Pajamas",
+        img: "https://i.pinimg.com/236x/29/26/94/2926948b4b142da056b1b6d8b68d9e4b.jpg",
+        price: 20000
+    },
+    {
+        name: "Brown Necklace",
+        img: "https://i.pinimg.com/236x/05/84/1a/05841aa7aa0771a98a61a4d492174518.jpg",
+        price: 12000
+    },
+    {
+        name: "Bed Hot Dog",
+        img: "https://i.pinimg.com/236x/aa/a6/01/aaa601284e586ab9913e200f742d2839.jpg",
+        price: 18000
+    },
+    {
+        name: "Feeder Elegant",
+        img: "https://i.pinimg.com/564x/28/13/d8/2813d85fe22d258ec3104d0e60b9e592.jpg",
+        price: 35000
     }
 ]
 
@@ -107,4 +135,24 @@ let listVeterinarys = [
         name: "Camila",
         lastName: "Reyes"
     },
+]
+// Login Arrays 
+const usersList = [
+    {
+        email: "cristianarrietar4@gmail.com",
+        password: "cristian123"
+    },
+    {
+        email: "davidarrieta@gmail.com",
+        password: "david123"
+    }
+]
+const dataUser = [
+    {
+        email: "cristianarrietar4@gmail.com",
+        name: "cristian",
+        pastPassword: [
+            "cristian123","cristian2025#","cristian2024"
+        ]
+    }
 ]

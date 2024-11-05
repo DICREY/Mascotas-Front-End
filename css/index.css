@@ -159,12 +159,6 @@ nav ol ol li {
     border-radius: 50%;
     border: 2px solid;
 }
-.bx-chevron-left {
-    left: 10px;
-}
-.bx-chevron-right {
-    right: 10px;
-}
 .ads-offers {
     display: flex;
     align-items: center;
@@ -189,6 +183,7 @@ nav ol ol li {
 /* card of products */
 .section-products {
     display: flex;
+    align-items: center;
     width: 100%;
     padding: 10px;
     gap: var(--font-size);
@@ -196,9 +191,16 @@ nav ol ol li {
     scroll-snap-type: x mandatory;
     scroll-padding: center;
 }
+.bx-chevron-left {
+    left: 10px;
+}
+.bx-chevron-right {
+    right: 10px;
+}
 .productCard {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     padding: 10px;
     height: 60vh;
     /* width: 70vw; */
@@ -210,7 +212,7 @@ nav ol ol li {
 .productCard p {
     font-weight: bold;
     font-size: var(--font-size);
-    color: var(--second);
+    color: var(--white);
     text-wrap: nowrap;
 }
 .productCard img {
@@ -222,6 +224,7 @@ nav ol ol li {
 }
 .productCard button {
     background: transparent;
+    border: 1px solid var(--lighter-primary);
 }
 /* footer */
 footer {

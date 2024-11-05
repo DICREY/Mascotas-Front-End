@@ -18,8 +18,9 @@ document.addEventListener("DOMContentLoaded",() => {
     const veterinary = document.getElementById("veterinary")
     const pets = document.getElementById("pets")
     const services = document.getElementById("services")
-    const times = document.getElementById("time-appointment")
     const monthYear = document.getElementById("month-year")
+    const showDataAppointment = document.getElementById("show-date-appointment")
+
 
     // Btns
     const btnI = document.querySelectorAll("#btn-i")
@@ -30,11 +31,11 @@ document.addEventListener("DOMContentLoaded",() => {
     const btnNextAppointmentRequest = document.getElementById("btn-next-appointment")
     const btnPrevMonth = document.getElementById("prev-month")
     const btnNextMonth = document.getElementById("next-month")
-    const dayAppointment =  document.querySelectorAll(".available")
+    const dayAppointment =  document.querySelector(".day-available")
     
     // Events 
     btnI.forEach(i => i.addEventListener("click",showToggle))
-    dayAppointment.forEach(i => i.addEventListener("click",addDayAppointment))
+    dayAppointment.addEventListener("click",addDayAppointment)
     btnBackAppointRequest.addEventListener("click",showFormRequest)
     btnBackAppointConsult.addEventListener("click",showFormConsult)
     requestAppointment.addEventListener("click",showFormRequest)
@@ -161,7 +162,7 @@ document.addEventListener("DOMContentLoaded",() => {
             span.innerText = day
             daysAvailable.forEach(i => {
                 if(i.month === months[currentMonth] && i.year === currentYear) {
-                    if (i.days.includes(day)) span.classList.add("available")
+                    if (i.days.includes(day)) span.classList.add("available day-available")
                 }
             })
             daysContainer.appendChild(span)
