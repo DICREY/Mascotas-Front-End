@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded",() => {
     const services = document.getElementById("services")
     const monthYear = document.getElementById("month-year")
     const showDataAppointment = document.getElementById("show-date-appointment")
-
+    const timeAppointment = document.getElementById("time-appointment")
 
     // Btns
     const btnI = document.querySelectorAll("#btn-i")
@@ -31,11 +31,9 @@ document.addEventListener("DOMContentLoaded",() => {
     const btnNextAppointmentRequest = document.getElementById("btn-next-appointment")
     const btnPrevMonth = document.getElementById("prev-month")
     const btnNextMonth = document.getElementById("next-month")
-    const dayAppointment =  document.querySelector(".day-available")
     
     // Events 
     btnI.forEach(i => i.addEventListener("click",showToggle))
-    dayAppointment.addEventListener("click",addDayAppointment)
     btnBackAppointRequest.addEventListener("click",showFormRequest)
     btnBackAppointConsult.addEventListener("click",showFormConsult)
     requestAppointment.addEventListener("click",showFormRequest)
@@ -80,11 +78,28 @@ document.addEventListener("DOMContentLoaded",() => {
         sectionAppointmentInputs.classList.toggle("inactive")   
     }
 
-    function addDayAppointment() {
-        // const p = document.createElement('p')
-        // p.innerHTML = `${day}/${currentMonth}/${currentYear}`
-        // sectionAppointmentCalendar.appendChild(p)
-        alert("asdkakhsd")
+    function addDayAppointment(day) {
+        const existp = showDataAppointment.querySelector(".date-Appointment")
+        let date = day.length > 1? `${day}/${currentMonth}/${currentYear}`: `0${day}/${currentMonth}/${currentYear}`
+
+        if (existp){
+            showDataAppointment.removeChild(existp)
+        }
+        
+        const p = document.createElement('p')
+        
+        p.innerHTML = date
+        p.className = "date-Appointment"
+        
+        showDataAppointment.appendChild(p)
+        
+        timesAvailable.forEach(i => {
+            const opt = document.createElement('option')
+
+            opt.value = i
+            opt.innerText = i
+            timeAppointment.appendChild(opt)
+        })
     }
 
     function showDateInput(list) {
@@ -162,7 +177,10 @@ document.addEventListener("DOMContentLoaded",() => {
             span.innerText = day
             daysAvailable.forEach(i => {
                 if(i.month === months[currentMonth] && i.year === currentYear) {
-                    if (i.days.includes(day)) span.classList.add("available day-available")
+                    if (i.days.includes(day)) {
+                        span.classList.add("available")
+                        span.addEventListener("click",() => addDayAppointment(span.textContent))
+                    }
                 }
             })
             daysContainer.appendChild(span)

@@ -77,6 +77,21 @@ const productList = [
         name: "Feeder Elegant",
         img: "https://i.pinimg.com/564x/28/13/d8/2813d85fe22d258ec3104d0e60b9e592.jpg",
         price: 35000
+    },
+    {
+        name: "Pet Bed",
+        img: "https://i.pinimg.com/564x/cf/44/b0/cf44b03d8656641596a5d041c7a5064a.jpg",
+        price: 40000
+    },
+    {
+        name: "Bath Gloves",
+        img: "https://i.pinimg.com/736x/86/63/f4/8663f4da97aeb47a234cbe588f113f18.jpg",
+        price: 25000
+    },
+    {
+        name: "Wipes",
+        img: "https://i.pinimg.com/236x/b9/12/e6/b912e69222e68c80c385843c601d8f8e.jpg",
+        price: 7000
     }
 ]
 
@@ -94,10 +109,7 @@ let daysAvailable = [
         month: "November",
         year: 2024,
         days: [
-            20,12,4,14,15
-        ],
-        times: [
-            "6am - 7am","7am - 8am","8am - 9am","9am - 10am","10am - 11am"
+            1,20,12,4,14,15
         ]
     },
     {
@@ -105,11 +117,11 @@ let daysAvailable = [
         year: 2024,
         days: [
             6,7,10,13,14,15
-        ],
-        times: [
-            "6am - 7am","7am - 8am","8am - 9am","9am - 10am","10am - 11am"
         ]
     }
+]
+let timesAvailable = [
+    "6am - 7am","7am - 8am","8am - 9am","9am - 10am","10am - 11am"
 ]
 let listPets = [ 
     "Sammy","Rocky","Max","Simba"

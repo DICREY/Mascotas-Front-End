@@ -121,6 +121,13 @@ main {
     border: 1px solid;
     width: 100%;
 }
+.span-time-appointment {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    margin-top: 10px;
+}
 .months {
     display: flex;
     align-items: center;
@@ -194,6 +201,12 @@ main {
     justify-content: center;
     width: 100%;
     gap: 5px;
+}
+.show-date-appointment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 .span-date-name {
     display: flex;

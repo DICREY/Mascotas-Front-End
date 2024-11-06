@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded",() => {
         const scrollInterval = setInterval(() => {
             contenedorAds.scrollBy({ left: leftScroll, behavior: 'smooth' })
             scrollAmount += leftScroll
-            if (scrollAmount > (200 + (contenedorAds.scrollWidth - contenedorAds.clientWidth))) {
+            if (scrollAmount > (400 + (contenedorAds.scrollWidth - contenedorAds.clientWidth))) {
                 contenedorAds.scrollTo({ left: 0, behavior: 'smooth' })
                 scrollAmount = 0
             }
