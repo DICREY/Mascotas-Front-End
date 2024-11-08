@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded",() => {
                 contenedorAds.scrollTo({ left: 0, behavior: 'smooth' })
                 scrollAmount = 0
             }
-        },0)
+        },2000)
     }
 
     function addProducts(list) {

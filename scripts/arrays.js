@@ -47,51 +47,61 @@ const productList = [
         name: "Dog Dish",
         img: "https://i.pinimg.com/564x/1d/1f/9a/1d1f9a2d6e6927d41551c70e72bd65eb.jpg",
         price: 5000,
+        categories: ""
     },
     {
         name: "Rubber Bone",
         img: "https://i.pinimg.com/564x/61/79/0b/61790b3731b71c011bb9cc19c7900990.jpg",
         price: 3000,
+        categories: ""
     },
     {
         name: "Cyan Necklace",
         img: "https://i.pinimg.com/564x/8f/b2/25/8fb2258fa4e5b5ca702d16a851e63cd2.jpg",
         price: 10000,
+        categories: ""
     },
     {
         name: "Dog Pajamas",
         img: "https://i.pinimg.com/236x/29/26/94/2926948b4b142da056b1b6d8b68d9e4b.jpg",
-        price: 20000
+        price: 20000,
+        categories: ""
     },
     {
         name: "Brown Necklace",
         img: "https://i.pinimg.com/236x/05/84/1a/05841aa7aa0771a98a61a4d492174518.jpg",
-        price: 12000
+        price: 12000,
+        categories: ""
     },
     {
         name: "Bed Hot Dog",
         img: "https://i.pinimg.com/236x/aa/a6/01/aaa601284e586ab9913e200f742d2839.jpg",
-        price: 18000
+        price: 18000,
+        categories: ""
     },
     {
         name: "Feeder Elegant",
         img: "https://i.pinimg.com/564x/28/13/d8/2813d85fe22d258ec3104d0e60b9e592.jpg",
-        price: 35000
+        price: 35000,
+        categories: ""
     },
     {
         name: "Pet Bed",
         img: "https://i.pinimg.com/564x/cf/44/b0/cf44b03d8656641596a5d041c7a5064a.jpg",
-        price: 40000
+        price: 40000,
+        categories: ""
     },
     {
         name: "Bath Gloves",
         img: "https://i.pinimg.com/736x/86/63/f4/8663f4da97aeb47a234cbe588f113f18.jpg",
-        price: 25000
+        price: 25000,
+        categories: ""
     },
     {
         name: "Wipes",
         img: "https://i.pinimg.com/236x/b9/12/e6/b912e69222e68c80c385843c601d8f8e.jpg",
-        price: 7000
+        price: 7000,
+        categories: ""
     }
 ]
 
