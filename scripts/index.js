@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded",() => {
             const nameProduct = document.createElement("p")
             const priceProduct = document.createElement("p")
             const btnBuy = document.createElement("button")
+            const btnView  = document.createElement('p')
 
             product.classList.add("productCard")
             imgProduct.src = i.img
@@ -67,11 +68,15 @@ document.addEventListener("DOMContentLoaded",() => {
             priceProduct.innerText = "Price: $" + i.price
             btnBuy.innerText = "Add Cart"
             btnBuy.classList.add("btn-link")
+            btnView.className = "btn-view-description"
+            btnView.classList.add("link")
+            btnView.textContent = "View Product"
 
             product.appendChild(imgProduct)
             product.appendChild(nameProduct)
             product.appendChild(priceProduct)
             product.appendChild(btnBuy)
+            product.appendChild(btnView)
             sectionProducts.appendChild(product)
         }
     }
