@@ -1,7 +1,12 @@
 document.addEventListener("DOMContentLoaded",() => {
     // containers 
+    const header = document.getElementById("header")
+    const main = document.getElementById("main")
+    const nav = document.getElementById("var-nav")
     const contenedorAds = document.getElementById("ads-offers")
     const sectionProducts = document.getElementById("section-products")
+    const sectionPictures = document.getElementById("section-pictures")
+    const footer = document.getElementById("footer")
     
     // Dynamic Labels 
     const menuDeploy = document.getElementById("menu-deploy")
@@ -53,13 +58,14 @@ document.addEventListener("DOMContentLoaded",() => {
         },2000)
     }
 
-    function addProducts(list) {
-        for (let i of list ) {
+    function addProducts() {
+        for (let i of productList ) {
             const product = document.createElement("div")
             const imgProduct = document.createElement("img")
             const nameProduct = document.createElement("p")
             const priceProduct = document.createElement("p")
             const btnBuy = document.createElement("button")
+            const spanbtnView  = document.createElement('span')
             const btnView  = document.createElement('p')
 
             product.classList.add("productCard")
@@ -69,20 +75,75 @@ document.addEventListener("DOMContentLoaded",() => {
             btnBuy.innerText = "Add Cart"
             btnBuy.classList.add("btn-link")
             btnView.className = "btn-view-description"
-            btnView.classList.add("link")
             btnView.textContent = "View Product"
 
+            spanbtnView.appendChild(btnView)
             product.appendChild(imgProduct)
             product.appendChild(nameProduct)
             product.appendChild(priceProduct)
             product.appendChild(btnBuy)
-            product.appendChild(btnView)
+            product.appendChild(spanbtnView)
             sectionProducts.appendChild(product)
+
+            let productElements = {
+                name: i.name,
+                img: i.img,
+                price: i.price,
+                description: i.description,
+                category: i.categories
+            }
+
+            btnView.addEventListener("click",() => showDescription(productElements))
         }
     }
 
-    // All functions 
+    function showDescription(container) {
+        const sectionExist = main.querySelector(".product-description")
+        if (sectionExist) main.removeChild(sectionExist)
+        mainBlur()
+        const productDescription = document.createElement('section')
+        const btnExitDescription = document.createElement('button')
+        const imgProduct = document.createElement('img')
+        const spanP = document.createElement('span')
+        const nameProduct = document.createElement('p')
+        const priceProduct = document.createElement('p')
+        const categProduct = document.createElement('p')
+        const desProduct = document.createElement('p')
+
+        btnExitDescription.innerHTML = `<i class='bx bx-x'></i>`
+        btnExitDescription.classList = "btn-exit-description"
+        imgProduct.src = container.img
+        nameProduct.innerHTML = `<strong>Name: </strong>${container.name}`
+        priceProduct.innerHTML = `<strong>Price: </strong>${container.price}`
+        categProduct.innerHTML = `<strong>Category: </strong>${container.category}`
+        desProduct.innerText = container.description
+        productDescription.className = "product-description"
+
+        spanP.appendChild(nameProduct)
+        spanP.appendChild(priceProduct)
+        spanP.appendChild(categProduct)
+        spanP.appendChild(desProduct)
+        productDescription.appendChild(btnExitDescription)
+        productDescription.appendChild(imgProduct)
+        productDescription.appendChild(spanP)
+        main.appendChild(productDescription)
+
+        btnExitDescription.addEventListener("click",() => {
+            mainBlur()
+            main.removeChild(productDescription)
+        })
+    }
+
+    function mainBlur() {
+        header.classList.toggle("blur")
+        nav.classList.toggle("blur")
+        sectionPictures.classList.toggle("blur")
+        sectionProducts.classList.toggle("blur")
+        footer.classList.toggle("blur")
+    }
+
+    // Call functions 
     addAds()
-    addProducts(productList)
+    addProducts()
 
 })

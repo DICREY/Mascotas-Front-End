@@ -226,6 +226,65 @@ nav ol ol li {
     background: transparent;
     border: 1px solid var(--lighter-primary);
 }
+.productCard span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.productCard span .btn-view-description {
+    cursor: pointer;
+    color: var(--second);
+}
+.productCard span .btn-view-description:hover {
+    color: var(--white);
+}
+.product-description {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+    height: 80vh;
+    width: 80vw;
+    left: 10vw;
+    gap: 10px;
+    background: var(--secundary);
+    border-radius: 10px;
+    /* border: 2px solid var(--gray); */
+    box-shadow: 0 0 30px var(--black);
+    color: var(--second);
+    z-index: 80;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+.product-description img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid var(--second);
+}
+.product-description span {
+    width: 100%;
+    font-size: var(--font-size);
+}
+.btn-exit-description {
+    position: absolute;
+    cursor: pointer;
+    top: 3vh;
+    right: 5vw;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+.btn-exit-description i {
+    border-radius: 50%;
+    background: var(--secundary);
+    font-size: var(--font-size2);
+    color: var(--white);
+    border: 2px solid var(--white);
+
+}
 /* footer */
 footer {
     background: var(--secundary);
