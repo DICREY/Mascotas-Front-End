@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded",() => {
     // Dynamic Labels 
     const menuDeploy = document.getElementById("menu-deploy")
     const ShopingCart = document.getElementById("Shoping-Cart")
+    const shopCantCart = document.getElementById("shop-cant")
 
     // btns 
     const btnMenu = document.getElementById("btn-menu")
@@ -94,6 +95,7 @@ document.addEventListener("DOMContentLoaded",() => {
             }
 
             btnView.addEventListener("click",() => showDescription(productElements))
+            btnBuy.addEventListener("click",() => addShopCart(productElements))
         }
     }
 
@@ -134,6 +136,32 @@ document.addEventListener("DOMContentLoaded",() => {
         })
     }
 
+    function addShopCart(productElements) {
+        const li = document.createElement("li")
+        const container = document.createElement("section")
+        const img = document.createElement("img")
+        const span = document.createElement("span")
+        const name = document.createElement("p")
+        const price = document.createElement("p")
+        const quitProduct = document.createElement("button")
+
+        img.src = productElements.img
+        name.innerHTML = `Name: ${productElements.name}`
+        price.innerHTML = `Price: $${productElements.price}`
+        container.className = "card-shop-product"
+        quitProduct.innerHTML = "<i class='bx bx-x'></i>"
+
+        container.appendChild(img)
+        span.appendChild(name)
+        span.appendChild(price)
+        container.appendChild(span)
+        container.appendChild(quitProduct)
+        li.appendChild(container)
+        ShopingCart.appendChild(li)
+        cantProductCart()
+    }
+
+    // Dynamic functions
     function mainBlur() {
         header.classList.toggle("blur")
         nav.classList.toggle("blur")
@@ -141,9 +169,13 @@ document.addEventListener("DOMContentLoaded",() => {
         sectionProducts.classList.toggle("blur")
         footer.classList.toggle("blur")
     }
+    function cantProductCart() {
+        let lis = ShopingCart.querySelectorAll("li")
+        lis.length > 0? shopCantCart.innerText = "" + lis.length: shopCantCart.innerText = "0"
+    }
 
     // Call functions 
     addAds()
     addProducts()
-
+    cantProductCart()
 })

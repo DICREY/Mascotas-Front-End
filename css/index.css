@@ -141,7 +141,72 @@ nav ol {
 nav ol ol li {
     position: relative;
 }
-
+.container-shop-cart {
+    position: relative;
+}
+.Shoping-Cart {
+    display: none;
+}
+.cart-shop:hover + .Shoping-Cart,.Shoping-Cart:hover {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    right: 10%;
+    padding: 15px;
+    max-height: 60vh;
+    gap: 15px;
+    border: 2px solid var(--card);
+    border-radius: 10px;
+    background: var(--secundary);
+    overflow: auto;
+    z-index: 80;
+}
+.Shoping-Cart ol {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.Shoping-Cart ol li section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border: 2px solid var(--second);
+    border-radius: 10px;
+}
+.Shoping-Cart ol li section img {
+    object-fit: cover;
+    width: 10vw;
+}
+.Shoping-Cart ol li section span {
+    display: flex;
+    flex-direction: column;
+    text-wrap: nowrap;
+}
+.Shoping-Cart ol li section button {
+    cursor: pointer;
+    border: none;
+    height: 100%;
+    background: var(--card);
+    font-size: var(--font-size2);
+    color: var(--white);
+    outline: none;
+}
+.Shoping-Cart .btn-buy {
+    background: var(--card);
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+.shop-cant {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: var(--font-size);
+    color: var(--white);
+}
 .section-ads-offers {
     position: relative;
     display: flex;
@@ -179,6 +244,19 @@ nav ol ol li {
     box-shadow: 0 0 20px;
     scroll-snap-align: center;
     background: var(--card);
+}
+.section-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    font-size: var(--font-size);
+    font-weight: bold;
+    color: var(--second);
+}
+.section-info img {
+    width: 90%;
 }
 /* card of products */
 .section-products {
@@ -252,7 +330,6 @@ nav ol ol li {
     gap: 10px;
     background: var(--secundary);
     border-radius: 10px;
-    /* border: 2px solid var(--gray); */
     box-shadow: 0 0 30px var(--black);
     color: var(--second);
     z-index: 80;
@@ -394,6 +471,31 @@ footer {
     }
     .span-btn-menu {
         display: none;
+    }
+    .section-info {
+        padding: 10vh 30vw;
+    }
+    .section-info img {
+        display: flex;
+        width: 60%;
+        border-radius: 50%;
+    }
+    .product-description {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .product-description img {
+        height: 100%;
+    }
+    .product-description span {
+        height: 100%;
+        gap: 20px;
+    }
+    .btn-exit-description {
+        top: 2vh;
+        right: 1vw;
     }
     footer {
         display: flex;
