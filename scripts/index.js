@@ -159,6 +159,10 @@ document.addEventListener("DOMContentLoaded",() => {
         li.appendChild(container)
         ShopingCart.appendChild(li)
         cantProductCart()
+
+        quitProduct.addEventListener("click",() => {
+            shopCantCart.removeChild(li)
+        })
     }
 
     // Dynamic functions

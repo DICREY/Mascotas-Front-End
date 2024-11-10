@@ -167,11 +167,16 @@ nav ol ol li {
     gap: 10px;
     flex-direction: column;
 }
+.Shoping-Cart ol li {
+    height: 100%;
+}
 .Shoping-Cart ol li section{
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+    height: 100%;
+    width: 100%;
     border: 2px solid var(--second);
     border-radius: 10px;
 }
