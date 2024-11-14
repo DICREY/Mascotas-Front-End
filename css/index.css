@@ -136,7 +136,7 @@ nav ol {
     color: var(--second) ;
     background: var(--secundary);
     padding: 10px;
-    border: 2px solid var(--second);
+    border: 2px solid var(--lighter-primary);
 }
 nav ol ol li {
     position: relative;

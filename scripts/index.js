@@ -4,19 +4,24 @@ document.addEventListener("DOMContentLoaded",() => {
     const main = document.getElementById("main")
     const nav = document.getElementById("var-nav")
     const contenedorAds = document.getElementById("ads-offers")
-    const sectionProducts = document.getElementById("section-products")
     const sectionPictures = document.getElementById("section-pictures")
+    const sectionInfo = document.getElementById("section-info")
+    const sectionProducts = document.getElementById("section-products")
     const footer = document.getElementById("footer")
     
     // Dynamic Labels 
     const menuDeploy = document.getElementById("menu-deploy")
     const ShopingCart = document.getElementById("Shoping-Cart")
     const shopCantCart = document.getElementById("shop-cant")
+    const totalPrice = document.getElementById("total-price")
 
     // btns 
     const btnMenu = document.getElementById("btn-menu")
     const btnScrollLeft = document.querySelector(".bx-chevron-left")
     const btnScrollRight = document.querySelector(".bx-chevron-right")
+
+    // Vars 
+    let totPrice = 0
 
     // Events 
     btnMenu.addEventListener("click",() => {
@@ -159,6 +164,7 @@ document.addEventListener("DOMContentLoaded",() => {
         li.appendChild(container)
         ShopingCart.appendChild(li)
         cantProductCart()
+        cartTotalPrice(productElements.price)
 
         quitProduct.addEventListener("click",() => {
             shopCantCart.removeChild(li)
@@ -170,12 +176,17 @@ document.addEventListener("DOMContentLoaded",() => {
         header.classList.toggle("blur")
         nav.classList.toggle("blur")
         sectionPictures.classList.toggle("blur")
+        sectionInfo.classList.toggle("blur")
         sectionProducts.classList.toggle("blur")
         footer.classList.toggle("blur")
     }
     function cantProductCart() {
         let lis = ShopingCart.querySelectorAll("li")
         lis.length > 0? shopCantCart.innerText = "" + lis.length: shopCantCart.innerText = "0"
+    }
+    function cartTotalPrice(price) {
+        totPrice += price
+        totalPrice.innerText = `Total price: $${totPrice}`
     }
 
     // Call functions 
