@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+@import url("../css/bem.css");
+@import url("../css/var.css");
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all .2s ease-in-out;
+}
+::-webkit-scrollbar {
+    display:none;
+}
+::selection {
+    color: var(--white);
+    background: var(--card);
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--secundary);
+    padding: 10px;
+    width: 100%;
+    color: var(--lighter-primary);
+}
+.logo-sena {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.name-corp {
+    font-family: "sofia",cursive;
+    font-weight: 400;
+    font-size: var(--font-size-title);
+    color: var(--lighter-primary);
+    text-shadow: 0 0 4px var(--second);
+}
+header span ol{
+    display: flex;
+    list-style: none;
+}
+@media (700px < width) {
+    header {
+        padding: 15px;
+    }
+    .logo-sena {
+        height: 60px;
+        width: 60px;
+    }
+}
