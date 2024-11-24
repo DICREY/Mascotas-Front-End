@@ -192,5 +192,6 @@ document.addEventListener("DOMContentLoaded",() => {
     // Call functions 
     addAds()
     addProducts()
+    createFooter(footer)
     cantProductCart()
 })
