@@ -182,7 +182,15 @@ document.addEventListener("DOMContentLoaded",() => {
     }
     function cantProductCart() {
         let lis = ShopingCart.querySelectorAll("li")
-        lis.length > 0? shopCantCart.innerText = "" + lis.length: shopCantCart.innerText = "0"
+        if(lis.length > 0) {
+            shopCantCart.innerText = "" + lis.length
+            const btnBuy = document.createElement('button')
+            btnBuy.className = "btn-link btn-buy"
+            btnBuy.type = "button"
+            btnBuy.innerText = "Buy"
+        } else {
+            shopCantCart.innerText = "0"
+        }
     }
     function cartTotalPrice(price) {
         totPrice += price

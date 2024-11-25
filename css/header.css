@@ -24,7 +24,7 @@ header {
     width: 100%;
     color: var(--lighter-primary);
 }
-.logo-sena {
+.logo {
     height: 40px;
     width: 40px;
     object-fit: cover;
@@ -37,7 +37,7 @@ header {
     color: var(--lighter-primary);
     text-shadow: 0 0 4px var(--second);
 }
-header span ol{
+header ol{
     display: flex;
     list-style: none;
 }

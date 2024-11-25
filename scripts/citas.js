@@ -82,9 +82,7 @@ document.addEventListener("DOMContentLoaded",() => {
         const existp = showDataAppointment.querySelector(".date-Appointment")
         let date = day.length > 1? `${day}/${currentMonth}/${currentYear}`: `0${day}/${currentMonth}/${currentYear}`
 
-        if (existp){
-            showDataAppointment.removeChild(existp)
-        }
+        existp?? showDataAppointment.removeChild(existp)
         
         const p = document.createElement('p')
         
@@ -188,6 +186,7 @@ document.addEventListener("DOMContentLoaded",() => {
     }
     
     // Call to functions
+    createHeader(header)
     createFooter(footer)
     renderCalendar()
     optsSelects()
