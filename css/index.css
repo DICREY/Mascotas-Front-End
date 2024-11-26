@@ -213,7 +213,7 @@ nav ol ol li {
     scroll-snap-type: x mandatory;
     scroll-padding: center;
 }
-.ads-offers img {
+.ads-offers img{
     display: flex;
     height: 90%;
     width: auto;
@@ -239,6 +239,33 @@ nav ol ol li {
 /* card of products */
 .section-products {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    color: var(--second);
+    gap: 15px;
+    font-weight: bold;
+    font-size: var(--font-size);
+}
+.section-products aside {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 5px;
+}
+.section-products aside div ul {
+    padding: 0px 25px;
+}
+.section-products aside picture {
+    display: flex;
+    place-content: center;
+    width: 100%;
+}
+.section-products section{
+    display: flex;
     align-items: center;
     width: 100%;
     padding: 10px;
@@ -246,12 +273,6 @@ nav ol ol li {
     overflow: auto;
     scroll-snap-type: x mandatory;
     scroll-padding: center;
-}
-.bx-chevron-left {
-    left: 10px;
-}
-.bx-chevron-right {
-    right: 10px;
 }
 .productCard {
     display: flex;
@@ -323,33 +344,6 @@ nav ol ol li {
     width: 100%;
     font-size: var(--font-size);
 }
-.btn-exit-description {
-    position: absolute;
-    cursor: pointer;
-    top: 3vh;
-    right: 5vw;
-    border: none;
-    background: transparent;
-    outline: none;
-}
-.btn-exit-description i {
-    border-radius: 50%;
-    background: var(--secundary);
-    font-size: var(--font-size2);
-    color: var(--white);
-    border: 2px solid var(--white);
-
-}
-/* iframe  */
-.footer {
-    display: flex;
-    width: 100%;
-    /* height: auto; */
-    overflow: hidden;
-}
-.footer::-webkit-scrollbar{
-    display: none;
-}
 /* dynamic class */
 .inactive {
     display: none;
@@ -357,7 +351,6 @@ nav ol ol li {
 .blur {
     filter: blur(5px);
 }
-
 /* media querys */
 @media (700px < width) {
     header {
@@ -398,6 +391,10 @@ nav ol ol li {
         display: flex;
         width: 60%;
         border-radius: 50%;
+    }
+    .section-products aside {
+        display: grid;
+        grid-template-columns: repeat(2,50%);
     }
     .product-description {
         display: flex;

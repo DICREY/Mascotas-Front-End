@@ -15,7 +15,7 @@
     color: var(--white);
     background: var(--card);
 }
-header {
+#header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,22 +30,15 @@ header {
     object-fit: cover;
     border-radius: 50%;
 }
-.name-corp {
-    font-family: "sofia",cursive;
-    font-weight: 400;
-    font-size: var(--font-size-title);
-    color: var(--lighter-primary);
-    text-shadow: 0 0 4px var(--second);
-}
 header ol{
     display: flex;
     list-style: none;
 }
 @media (700px < width) {
-    header {
+    #header {
         padding: 15px;
     }
-    .logo-sena {
+    .logo {
         height: 60px;
         width: 60px;
     }

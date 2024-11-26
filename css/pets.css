@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
 @import url("bem.css");
 @import url("var.css");
 *{
@@ -25,6 +24,14 @@ body {
     width: 100%;
     background: var(--secundary);
     overflow: auto;
+}
+/* main */
+main {
+    display: flex;
+    place-content: center;
+    width: 100%;
+    gap: 10px;
+    background: var(--secundary);
 }
 /* nav */
 nav {
@@ -53,7 +60,7 @@ nav ol {
 }
 .bx-x {
     transform:
-    rotateZ(180deg);
+        rotateZ(180deg);
 }
 .menu-deploy{
     display: grid;
@@ -70,15 +77,6 @@ nav ol {
 }
 nav ol ol li {
     position: relative;
-}
-
-/* main */
-main {
-    display: grid;
-    grid-template-columns: 20%,80%;
-    width: 100%;
-    gap: 10px;
-    background: var(--secundary);
 }
 /* dynamic class */
 .inactive {

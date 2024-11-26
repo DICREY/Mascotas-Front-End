@@ -74,15 +74,21 @@ document.addEventListener("DOMContentLoaded",() => {
     }
 
     function showSectionFormRequest() {
-        sectionAppointmentCalendar.classList.toggle("inactive")
-        sectionAppointmentInputs.classList.toggle("inactive")   
+        let ready = sectionAppointmentCalendar.classList.contains("inactive")
+        if (ready) {
+            alert("Agendado")
+            showFormRequest()
+        } else {
+            sectionAppointmentCalendar.classList.toggle("inactive")
+            sectionAppointmentInputs.classList.toggle("inactive")  
+        }
     }
 
     function addDayAppointment(day) {
         const existp = showDataAppointment.querySelector(".date-Appointment")
         let date = day.length > 1? `${day}/${currentMonth}/${currentYear}`: `0${day}/${currentMonth}/${currentYear}`
 
-        existp?? showDataAppointment.removeChild(existp)
+        if (existp) showDataAppointment.removeChild(existp)
         
         const p = document.createElement('p')
         

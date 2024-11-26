@@ -1,46 +1,30 @@
 // Main arrays
-const adsList = [
-    {
-        url: "https://i.pinimg.com/564x/b2/7d/2d/b27d2d22ab6b6c7d9e7dfd862d607786.jpg",
-        name:"HappyDog",
-    },
-    {
-        url: "https://i.pinimg.com/564x/ec/eb/f2/ecebf26fa18819027996e70f0cf8aacb.jpg",
-        name:"Dog",
-    },
-    {
-        url: "https://i.pinimg.com/236x/4b/38/ca/4b38ca45c95c29710d4464c4641ef2f5.jpg",
-        name: "Cat with Flow"
-    },
-    {
-        url: "https://i.pinimg.com/564x/00/43/65/004365dafc00aafb10554d5ce5e07133.jpg",
-        name:"DogFlow",
-    },
-    {
-        url: "https://i.pinimg.com/564x/2f/f0/4e/2ff04e635be5d4182ae3951dce071574.jpg",
-        name:"GatoLeon",
-    },
-    {
-        url: "https://i.pinimg.com/564x/8b/3b/a7/8b3ba7ec66c1b2ffa5e86884e189055f.jpg",
-        name:"GatoFrances",
-    },
-    {
-        url: "https://i.pinimg.com/564x/64/72/75/6472757b246d9d27826dd13544bef275.jpg",
-        name:"ParejaGatosFranceses",
-    },
-    {
-        url:"https://i.pinimg.com/564x/c6/da/13/c6da1347910ea85e0530573c8e4c2b6f.jpg",
-        name:"Dog Happy",
-    },
-    {
-        url: "https://i.pinimg.com/236x/e8/1d/9f/e81d9f2306439a6a9f5cf76ccba77dba.jpg",
-        name:"Rapper Dog"
-    },
-    {
-        url: "https://i.pinimg.com/236x/9e/eb/ba/9eebba971101f37513d646780f513349.jpg",
-        name: "Potter Dog"
-    }
-]
+const petList = async (picturesContainer) => {
+    const URL = "https://api.thecatapi.com/v1/images/search?limit=10"
+    fetch(URL)
+    .then(res => res.json())
+    .then(datas => datas.forEach(i => {
+        const img = document.createElement("img")
+        img.src = i.url
+        img.className = "pet-picture"
+        picturesContainer.appendChild(img)
+    }))
+    .catch((err) => {
+        const p = document.createElement("h2")
+        p.innerText = `Error ${err.message}`
+        picturesContainer.appendChild(p)
+    })
+}
+
+const servicesList = () => {
+    const URL = ""   
+    fetch(URL)
+    .then(res => res.json())
+    .then(datas => {
+        let info = datas
+
+    })
+}
 
 const productList = [
     {

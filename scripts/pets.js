@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded",() => {
-    // Container labels 
+    // Container labels
     const header = document.getElementById("header")
-    const sectionServices = document.getElementById("section-services")
     const footer = document.getElementById("footer")
 
-    // Call functions
+    // Call to functions
     createHeader(header)
     createFooter(footer)
 })

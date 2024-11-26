@@ -1,5 +1,62 @@
 /* import vars  */
 @import url("var.css");
+.name-corp {
+    font-family: "sofia",cursive;
+    font-weight: 400;
+    font-size: var(--font-size-title);
+    color: var(--lighter-primary);
+    text-shadow: 0 0 4px var(--second);
+}
+.titles {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: var(--font-size-login-title);
+    letter-spacing: 0px;
+    line-height: 1.2;
+    color: var(--lighter-primary);
+}
+.sub-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0px;
+    font-size: var(--font-size-title);
+    line-height: 1.2;
+    color: var(--lighter-primary);
+}
+.bx-chevron-left {
+    left: 10px;
+}
+.bx-chevron-right {
+    right: 10px;
+}
+.btn-exit-description {
+    position: absolute;
+    cursor: pointer;
+    top: 3vh;
+    right: 5vw;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+.btn-exit-description i {
+    border-radius: 50%;
+    background: var(--secundary);
+    font-size: var(--font-size2);
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+.imgs {
+    display: flex;
+    width: 90%;
+    object-fit: cover;
+    border: 2px solid var(--secundary);
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--gray);
+    scroll-snap-align: center;
+    background: var(--card);
+}
 .btn-link {
     cursor: pointer;
     position: relative;

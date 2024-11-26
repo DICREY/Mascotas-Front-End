@@ -1,5 +1,4 @@
 /* import fonts, vars and designs */
-@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
 @import url("bem.css");
 @import url("var.css");
 *{
@@ -36,6 +35,51 @@ main {
     width: 100%;
     gap: 10px;
     background: var(--secundary);
+}
+/* nav */
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    width: 100%;
+    padding: 5px 2px;
+    background: var(--secundary);
+    box-shadow: 0 6px 6px;
+    z-index: 50;
+}
+nav ol {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.btn-menu{
+    color: var(--lighter-primary);
+    font-size: var(--size-icon);
+}
+.span-btn-menu{
+    cursor: pointer;
+}
+.bx-x {
+    transform:
+        rotateZ(180deg);
+}
+.menu-deploy{
+    display: grid;
+    position: absolute;
+    list-style: none;
+    border-radius: 10px;
+    right: 2%;
+    top: 100%;
+    width: auto;
+    color: var(--second) ;
+    background: var(--secundary);
+    padding: 10px;
+    border: 2px solid var(--lighter-primary);
+}
+nav ol ol li {
+    position: relative;
 }
 .section {
     position: relative;
@@ -255,6 +299,30 @@ main {
 }
 /* media querys */
 @media (700px < width) {
+    nav {
+        padding: 5px 8px;
+    }
+    nav ol {
+        display: flex;
+        justify-content: space-around;
+        width: 100%; 
+    }
+    .menu-deploy {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+    }
+    .span-btn-menu {
+        display: none;
+    }
     .section {
         width: 50%;
     }

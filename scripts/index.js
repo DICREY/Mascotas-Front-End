@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded",() => {
     const ShopingCart = document.getElementById("Shoping-Cart")
     const shopCantCart = document.getElementById("shop-cant")
     const totalPrice = document.getElementById("total-price")
+    const petPictures = document.getElementsByClassName("pet-picture")
 
     // btns 
     const btnMenu = document.getElementById("btn-menu")
@@ -43,22 +44,16 @@ document.addEventListener("DOMContentLoaded",() => {
     })
 
     // functions
-    function addAds() {
-        for (let i of adsList){
-            const ads = document.createElement("img")
-            ads.src = i.url
-            ads.alt = i.name
-            ads.title = i.name
-            contenedorAds.appendChild(ads)
-        }
+    async function addPets(picturesContainer) {
+        await petList(picturesContainer)
 
         let scrollAmount = 0
-        let leftScroll = 200
+        let leftScroll = 400
         const scrollInterval = setInterval(() => {
             contenedorAds.scrollBy({ left: leftScroll, behavior: 'smooth' })
             scrollAmount += leftScroll
-            if (scrollAmount > (400 + (contenedorAds.scrollWidth - contenedorAds.clientWidth))) {
-                contenedorAds.scrollTo({ left: 0, behavior: 'smooth' })
+            if (scrollAmount > (800 + picturesContainer.scrollWidth - picturesContainer.clientWidth)) {
+                picturesContainer.scrollTo({ left: 0, behavior: 'smooth' })
                 scrollAmount = 0
             }
         },2000)
@@ -188,9 +183,7 @@ document.addEventListener("DOMContentLoaded",() => {
             btnBuy.className = "btn-link btn-buy"
             btnBuy.type = "button"
             btnBuy.innerText = "Buy"
-        } else {
-            shopCantCart.innerText = "0"
-        }
+        } else shopCantCart.innerText = "0"
     }
     function cartTotalPrice(price) {
         totPrice += price
@@ -198,7 +191,7 @@ document.addEventListener("DOMContentLoaded",() => {
     }
 
     // Call functions 
-    addAds()
+    addPets(contenedorAds)
     addProducts()
     createFooter(footer)
     cantProductCart()
