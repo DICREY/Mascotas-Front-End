@@ -33,7 +33,7 @@ const productList = [
         price: 5000,
         description: "It's a plate designed specifically for dogs to eat or drink. This object is made of plastic that is resistant to drops and minor scratches.",
         categories: "Food",
-        for: ""
+        for: ["Dogs"]
     },
     {
         name: "Rubber Bone",
@@ -41,7 +41,7 @@ const productList = [
         price: 3000,
         description: "",
         categories: "Toy",
-        for: ""
+        for: ["Dogs"]
     },
     {
         name: "Cyan Necklace",
@@ -49,7 +49,7 @@ const productList = [
         price: 10000,
         description: "",
         categories: "Clothes",
-        for: ""
+        for: ["Dogs"]
     },
     {
         name: "Dog Pajamas",
@@ -57,7 +57,7 @@ const productList = [
         price: 20000,
         description: "",
         categories: "Clothes",
-        for: ""
+        for: ["Dogs"]
     },
     {
         name: "Brown Necklace",
@@ -65,7 +65,7 @@ const productList = [
         price: 12000,
         description: "",
         categories: "Clothes",
-        for: ""
+        for: ["Dogs"]
     },
     {
         name: "Bed Hot Dog",
@@ -73,7 +73,7 @@ const productList = [
         price: 18000,
         description: "",
         categories: "Tools",
-        for: ""
+        for: ["Dogs"]
     },
     {
         name: "Feeder Elegant",
@@ -81,7 +81,9 @@ const productList = [
         price: 35000,
         description: "",
         categories: "Food",
-        for: ""
+        for: [
+            "Dogs","Cats"
+        ]
     },
     {
         name: "Pet Bed",
@@ -89,7 +91,7 @@ const productList = [
         price: 40000,
         description: "",
         categories: "Tools",
-        for: ""
+        for: ["Dogs"]
     },
     {
         name: "Bath Gloves",
@@ -97,7 +99,7 @@ const productList = [
         price: 25000,
         description: "",
         categories: "Tools",
-        for: ""
+        for: ["Dogs"]
     },
     {
         name: "Wipes",
@@ -105,7 +107,7 @@ const productList = [
         price: 7000,
         description: "",
         categories: "Accessories",
-        for: ""
+        for: ["Dogs"]
     }
 ]
 
@@ -141,8 +143,41 @@ let listPets = [
     "Sammy","Rocky","Max","Simba"
 ]
 let listServices = [
-    "Vacunación","Consulta Veterinaria General","Desparasitación","Limpieza Dental",
-    "Baño y Corte de Pelo","Cirugía Menor","Consulta de Emergencia"
+    {
+        name:"Vacunación",
+        description: "Es un procedimiento esencial para proteger a las mascotas contra enfermedades infecciosas como el moquillo, parvovirus, rabia o leucemia felina. Durante el proceso, el veterinario evalúa el estado de salud del animal, aplica la vacuna correspondiente según su edad, especie y estilo de vida, y establece un calendario de refuerzos para mantener la inmunidad a largo plazo. Las vacunas no solo previenen enfermedades graves, sino que también contribuyen a la salud pública al reducir el riesgo de transmisión de zoonosis.",
+        url: "https://cdn2.thecatapi.com/images/MTYwMzUxNg.jpg"
+    },
+    {
+        name: "Consulta Veterinaria General",
+        description: "Una consulta veterinaria general es el primer paso para evaluar la salud de tu mascota, prevenir problemas futuros y detectar enfermedades en etapas tempranas. Es un servicio esencial que todas las clínicas veterinarias ofrecen, y que debe realizarse de manera regular para garantizar el bienestar de tu compañero animal.",
+        url: "https://cdn2.thecatapi.com/images/a2l.jpg"
+    },
+    {
+        name: "Desparasitación",
+        description: "La desparasitación en una veterinaria es un procedimiento esencial para mantener la salud de las mascotas y prevenir problemas que afectan tanto a los animales como a las personas. Consiste en eliminar parásitos internos (como lombrices) y externos (como pulgas y garrapatas) que pueden causar enfermedades graves si no se tratan.",
+        url: "https://cdn2.thecatapi.com/images/MTUyOTY0OQ.jpg"
+    },
+    {
+        name: "Limpieza Dental",
+        description: "Es un procedimiento profesional que elimina la placa y el sarro acumulados en los dientes de las mascotas, ayudando a prevenir enfermedades bucales como gingivitis, periodontitis y mal aliento.Previene infecciones y pérdida dental.",
+        url: "https://cdn2.thecatapi.com/images/MTgxNTAxOA.jpg"
+    },
+    {
+        name: "Baño y Corte de Pelo",
+        description: "El baño y corte de pelo en una veterinaria es un servicio profesional que garantiza la higiene, salud y apariencia de las mascotas,algunos beneficios son, la prevencion de problemas de piel y parásitos, mantener el pelaje saludable y sin enredos, contribuir al bienestar general y comodidad de la mascota.",
+        url: "https://cdn2.thecatapi.com/images/0c9_EEtqQ.jpg"
+    },
+    {
+        name: "Cirugía Menor",
+        description: "La cirugía menor incluye procedimientos sencillos y de bajo riesgo, realizados generalmente de manera ambulatoria, como esterilizaciones, extracción de tumores pequeños, suturas de heridas superficiales y limpieza de abscesos. Estas intervenciones suelen implicar anestesia local o general según la complejidad, un corto tiempo de recuperación y monitoreo profesional para garantizar el bienestar del animal. Sus beneficios incluyen la prevención de problemas futuros, como infecciones o reproducción no deseada, y una mejora en la calidad de vida de la mascota, siendo menos invasivas y económicas que las cirugías mayores.",
+        url: "https://cdn2.thecatapi.com/images/MTk4MTAxOQ.jpg"
+    },
+    {
+        name: "Consulta de Emergencia",
+        description: "La consulta de emergencia esta destinada a atender situaciones urgentes que ponen en riesgo la vida o salud de una mascota, como accidentes, heridas graves, intoxicaciones, dificultad para respirar, convulsiones o fiebre alta. En estos casos, el veterinario realiza una evaluación rápida y prioritaria para estabilizar al animal, identificar la causa del problema y aplicar el tratamiento necesario, que puede incluir medicamentos, fluidoterapia, curas o incluso cirugía inmediata. Este servicio es vital para actuar con rapidez y aumentar las posibilidades de recuperación en casos críticos.",
+        url: "https://cdn2.thecatapi.com/images/cjt.jpg"
+    }
 ]
 let listVeterinarys = [
     {
@@ -182,3 +217,20 @@ const dataUser = [
         ]
     }
 ]
+
+function petsGet() {
+    const headers = new Headers({
+        "Content-Type": "application/json",
+        "x-api-key":"live_zUUJgF0bKp5p2ql6OyJtavP7z0t2Dhyw6OAPoTbmSUg6t9JNiKYj8fdE1eTc5xwt"
+    })
+    const requestOption = {
+        method: "GET",
+        headers: headers
+    }
+
+    fetch("",requestOption)
+    .then(res => res.json())
+    .then(data => {
+        let info = data
+    })
+}

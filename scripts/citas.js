@@ -161,8 +161,8 @@ document.addEventListener("DOMContentLoaded",() => {
         })
         listServices.forEach(i => {
             const opt = document.createElement("option")
-            opt.value = i
-            opt.innerText = i
+            opt.value = i.name
+            opt.innerText = i.name
             services.appendChild(opt)
         })
     }

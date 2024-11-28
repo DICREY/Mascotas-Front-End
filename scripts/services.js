@@ -1,38 +1,40 @@
 document.addEventListener("DOMContentLoaded",() => {
     // Container labels 
     const header = document.getElementById("header")
-    const containerFilter = document.getElementById("container-filter")
-    const filters = document.getElementById("filter")
-    const sectionServices = document.getElementById("section-services")
+    const servicesContainer = document.getElementById("services-container")
     const footer = document.getElementById("footer")
 
     // Btns
     const btnMenu = document.getElementById("btn-menu")
-    const btnMenuFilter = document.getElementById("span-btn-menu-filter")
 
     // Dynamic labels 
     const menuDeploy = document.getElementById("menu-deploy")
-    const iconMenuFilters = document.getElementById("btn-menu-filter")
 
-    // Events
-    btnMenuFilter.addEventListener("click",deployFiltersMenu)
+    function createServicesCard () {
+        listServices.forEach(i => {
+            // Create labels 
+            const servicesCard = document.createElement("div")
+            const img = document.createElement("img")
+            const title = document.createElement("p")
+            const description = document.createElement("p")
 
-    // Functions
-    function deployFiltersMenu() {
-        let verifyClass = iconMenuFilters.className === "bx bx-menu btn-menu"
-        if (verifyClass) {
-            iconMenuFilters.className = "bx bx-x btn-menu"
-            filters.classList.remove("inactive")
-            containerFilter.style.animation = "translate .3s linear forwards"
-        } else {
-            iconMenuFilters.className = "bx bx-menu btn-menu"
-            filters.classList.add("inactive")
-            containerFilter.style.animation = "none"
-        }
+            // Modify labels
+            img.src = i.url
+            title.className = "sub-title"
+            title.innerHTML = i.name
+            // description.innerHTML = i.description
+            
+            // Add childs
+            servicesContainer.appendChild(servicesCard)
+            servicesCard.appendChild(img)
+            servicesCard.appendChild(title)
+            // servicesCard.appendChild(description)
+        })
     }
 
     // Call functions
     createHeader(header)
     dynamicNav(btnMenu,menuDeploy)
+    createServicesCard()
     createFooter(footer)
 })
