@@ -280,7 +280,7 @@ nav ol ol li {
     justify-content: space-around;
     padding: 10px;
     height: 60vh;
-    /* width: 70vw; */
+    width: 180px;
     gap: 5px;
     border-radius: 10px;
     background: var(--card);
@@ -395,6 +395,9 @@ nav ol ol li {
     .section-products aside {
         display: grid;
         grid-template-columns: repeat(2,50%);
+    }
+    .productCard {
+        width: 280;
     }
     .product-description {
         display: flex;
