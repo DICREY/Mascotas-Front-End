@@ -3,7 +3,6 @@ function createHeader(header) {
     const picture = document.createElement("picture")
     const img = document.createElement("img")
     const pNameCorp = document.createElement("p")
-    const spanlog = document.createElement("span")
     const olLog = document.createElement("ol")
     const liLog = document.createElement("li")
     const aUser = document.createElement("a")
@@ -40,4 +39,17 @@ function createHeader(header) {
     liLog.appendChild(aUser)
     deployingLog.appendChild(deployingLiLog)
     deployingLog.appendChild(deployingLiReg)
+}
+
+function dynamicNav(btnMenu,menuDeploy) {
+    // Event
+    btnMenu.addEventListener("click",() => {
+        if (btnMenu.className === "bx bx-x btn-menu") {
+            btnMenu.className = "bx bx-menu btn-menu"
+            menuDeploy.classList.add("inactive")
+        } else {
+            btnMenu.className = "bx bx-x btn-menu"
+            menuDeploy.classList.remove("inactive")
+        }
+    })
 }

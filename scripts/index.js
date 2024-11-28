@@ -25,16 +25,6 @@ document.addEventListener("DOMContentLoaded",() => {
     let totPrice = 0
 
     // Events 
-    btnMenu.addEventListener("click",() => {
-        if (btnMenu.className === "bx bx-x btn-menu"){
-            btnMenu.className = "bx bx-menu btn-menu"
-            menuDeploy.classList.add("inactive")
-        } else {
-            btnMenu.className = "bx bx-x btn-menu"
-            menuDeploy.classList.remove("inactive")
-        }
-    })
-
     btnScrollLeft.addEventListener("click",() => {
         sectionProducts.scrollBy({ left:-200, behavior: 'smooth' })
     })
@@ -100,9 +90,10 @@ document.addEventListener("DOMContentLoaded",() => {
     }
 
     function showDescription(container) {
-        const sectionExist = main.querySelector(".product-description")
+        const sectionExist = main.getElementsByClassName("product-description")
         if (sectionExist) main.removeChild(sectionExist)
         mainBlur()
+        // Create labels
         const productDescription = document.createElement('section')
         const btnExitDescription = document.createElement('button')
         const imgProduct = document.createElement('img')
@@ -175,6 +166,7 @@ document.addEventListener("DOMContentLoaded",() => {
         sectionProducts.classList.toggle("blur")
         footer.classList.toggle("blur")
     }
+
     function cantProductCart() {
         let lis = ShopingCart.querySelectorAll("li")
         if(lis.length > 0) {
@@ -185,12 +177,14 @@ document.addEventListener("DOMContentLoaded",() => {
             btnBuy.innerText = "Buy"
         } else shopCantCart.innerText = "0"
     }
+
     function cartTotalPrice(price) {
         totPrice += price
         totalPrice.innerText = `Total price: $${totPrice}`
     }
 
     // Call functions 
+    dynamicNav(btnMenu,menuDeploy)
     addPets(contenedorAds)
     addProducts()
     createFooter(footer)

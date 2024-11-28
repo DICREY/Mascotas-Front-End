@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
-@import url("../css/bem.css");
-@import url("../css/var.css");
+@import url("bem.css");
+@import url("var.css");
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: all .2s ease-in-out;
+    /* transition: all .2s ease-in-out; */
 }
 ::-webkit-scrollbar {
     display:none;
@@ -15,7 +14,7 @@
     color: var(--white);
     background: var(--card);
 }
-#header {
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,12 +29,20 @@
     object-fit: cover;
     border-radius: 50%;
 }
-header ol{
+header span ol{
     display: flex;
     list-style: none;
 }
+
+/* dynamic class */
+.inactive {
+    display: none;
+}
+.blur {
+    filter: blur(5px);
+}
 @media (700px < width) {
-    #header {
+    .header {
         padding: 15px;
     }
     .logo {

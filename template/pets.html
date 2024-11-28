@@ -16,10 +16,10 @@
 </head>
 <body>
     <header>
-        <header id="header">
+        <header id="header" class="header">
         </header>
         <nav id="var-nav" class="var-nav">
-            <ol style="list-style: none;">
+            <ol class="ol-var-nav" style="list-style: none;">
                 <li><a class="btn-link" href="../index.html">Home</a></li>
                 <li><a class="btn-link" href="./services.html">Services</a></li>
                 <li><a class="btn-link" href="./citas.html">Citas</a></li>
@@ -42,6 +42,27 @@
         </nav>
     </header>
     <main>
+        <aside id="container-filter" class="container-filter">
+            <span id="span-btn-menu-filter" class="span-btn-menu-filter">
+                <i id="btn-menu-filter" class='bx bx-menu btn-menu'></i>
+                <!-- <p>Filter Pets</p> -->
+            </span>
+            <nav id="filter" class="filter inactive">
+                <form id="container-filter-search" class="filter-search">
+                    <input class="search" type="search" placeholder="Search">
+                    <i class='bx bx-search-alt'></i>
+                </form>
+                <form id="list-filters">
+                    <p class="sub-title">Filter</p>
+                    <span>
+                        <input type="radio" class="" name="">
+                        <p>asdas</p>
+                    </span>
+                </form>
+            </nav>
+        </aside>
+        <section id="container-pets">
+        </section>
     </main>
     <footer id="footer">
     </footer>

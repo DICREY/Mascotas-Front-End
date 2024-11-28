@@ -27,14 +27,19 @@ body {
 }
 /* main */
 main {
+    position: relative;
     display: flex;
-    place-content: center;
+    padding: 2px 0;
+    place-content: start;
+    min-height: 50%;
     width: 100%;
     gap: 10px;
+    color: var(--second);
     background: var(--secundary);
 }
+
 /* nav */
-nav {
+.var-nav {
     position: sticky;
     top: 0;
     display: flex;
@@ -44,7 +49,7 @@ nav {
     box-shadow: 0 6px 6px;
     z-index: 50;
 }
-nav ol {
+.ol-var-nav {
     display: flex;
     position: relative;
     align-items: center;
@@ -75,8 +80,72 @@ nav ol {
     padding: 10px;
     border: 2px solid var(--lighter-primary);
 }
-nav ol ol li {
+.ol-var-nav > ol li {
     position: relative;
+}
+/* filters  */
+.container-filter {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 14%;
+    border-radius: 10px;
+    z-index: 50;
+}
+.span-btn-menu-filter {
+    cursor: pointer;
+    position: relative;
+    z-index: 50;
+}
+.filter {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    height: 90%;
+    width: 100%;
+    gap: 6px;
+}
+.filter  {
+    position: relative;
+    display: flex;
+}
+.filter-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.search {
+    display: flex;
+    outline: none;
+    border-radius: 10px;
+    width: 100%;
+    padding: 3px 5px;
+    background: transparent;
+    border: 1px solid var(--lighter-primary);
+    font-size: var(--font-size);
+    color: var(--card);
+}
+.search::-webkit-search-cancel-button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+.search::placeholder {
+    color: var(--lighter-primary);
+}
+.bx-search-alt {
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+    right: 2%;
+    color: var(--lighter-primary);
+    font-size: var(--font-size2);
+    z-index: 30;
+}
+.search:focus + .bx-search-alt {
+    color: transparent;
 }
 /* dynamic class */
 .inactive {
@@ -85,11 +154,23 @@ nav ol ol li {
 .blur {
     filter: blur(5px);
 }
+@keyframes translate {
+    from {
+        width: 15%;
+        border: none;
+        background: var(--secundary);
+    }
+    to {
+        width: 60%; 
+        border: 2px solid var(--card);
+        background: var(--secundary);
+    }
+}
 @media (700px < width) {
-    nav {
+    .var-nav {
         padding: 5px 8px;
     }
-    nav ol {
+    .ol-var-nav {
         display: flex;
         justify-content: space-around;
         width: 100%; 
@@ -109,5 +190,17 @@ nav ol ol li {
     }
     .span-btn-menu {
         display: none;
+    }
+    @keyframes translate {
+        from {
+            width: 6%; 
+            border: none;
+            background: var(--secundary);
+        }
+        to {
+            width: 24%; 
+            border: 2px solid var(--card);
+            background: var(--secundary);
+        }
     }
 }
