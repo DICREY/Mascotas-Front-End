@@ -1,0 +1,72 @@
+[
+    {
+        "id": "VET001",
+        "name": "Alimento Balanceado Cachorros",
+        "description": "Nutrición especializada para perros cachorros, con alto contenido proteico y vitaminas para un desarrollo saludable",
+        "price": 45.75000,
+        "stock": 50
+    },
+    {
+        "id": "VET002",
+        "name": "Vacuna Múltiple Canina",
+        "description": "Vacuna pentavalente que protege contra distemper, hepatitis, leptospirosis, parainfluenza y parvovirus",
+        "price": 35.50000,
+        "stock": 25
+    },
+    {
+        "id": "VET003",
+        "name": "Collar Antipulgas Premium",
+        "description": "Collar de liberación prolongada contra pulgas y garrapatas, efectivo por hasta 8 meses de protección",
+        "price": 29.99000,
+        "stock": 40
+    },
+    {
+        "id": "VET004",
+        "name": "Kit de Primeros Auxilios Veterinario",
+        "description": "Estuche completo con materiales esenciales para emergencias, vendas, desinfectante, tijeras y guantes",
+        "price": 65.25000,
+        "stock": 15
+    },
+    {
+        "id": "VET005",
+        "name": "Desparasitante Perros/Gatos",
+        "description": "Tratamiento desparasitante interno de amplio espectro, efectivo contra lombrices y parásitos intestinales",
+        "price": 18.75000,
+        "stock": 60
+    },
+    {
+        "id": "VET006",
+        "name": "Arena Sanitaria Aglutinante",
+        "description": "Arena especial para gatos con tecnología de aglutinamiento rápido y control de olores",
+        "price": 22.50000,
+        "stock": 35
+    },
+    {
+        "id": "VET007",
+        "name": "Shampoo Medicinal Dermatológico",
+        "description": "Shampoo terapéutico para tratar problemas de piel, alergias e irritaciones en perros y gatos",
+        "price": 27.80000,
+        "stock": 30
+    },
+    {
+        "id": "VET008",
+        "name": "Correa Retráctil Ergonómica",
+        "description": "Correa extensible de 5 metros con sistema de frenado suave y mango antideslizante para paseos cómodos",
+        "price": 34.60000,
+        "stock": 45
+    },
+    {
+        "id": "VET009",
+        "name": "Juguete Interactivo para Perros",
+        "description": "Juguete de goma resistente con dispensador de premios, ideal para estimulación mental y física",
+        "price": 19.90000,
+        "stock": 55
+    },
+    {
+        "id": "VET010",
+        "name": "Transportadora Aérea Homologada",
+        "description": "Bolso transportador profesional para mascotas, certificado para viajes aéreos, con ventilación y comodidad",
+        "price": 89.75000,
+        "stock": 20
+    }
+]
