@@ -37,7 +37,7 @@ main {
     background: var(--secundary);
 }
 /* nav */
-nav {
+.var-nav {
     position: sticky;
     top: 0;
     display: flex;
@@ -47,7 +47,7 @@ nav {
     box-shadow: 0 6px 6px;
     z-index: 50;
 }
-nav ol {
+.var-nav > ol {
     display: flex;
     position: relative;
     align-items: center;
@@ -299,10 +299,10 @@ nav ol ol li {
 }
 /* media querys */
 @media (700px < width) {
-    nav {
+    .var-nav {
         padding: 5px 8px;
     }
-    nav ol {
+    .var-nav > nav {
         display: flex;
         justify-content: space-around;
         width: 100%; 
@@ -313,7 +313,7 @@ nav ol ol li {
         align-items: center;
         justify-content: space-around;
         list-style: none;
-        width: 100%;
+        width: 70%;
         top: 0;
         left: 0;
         padding: 0;
