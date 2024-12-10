@@ -322,16 +322,21 @@ nav ol ol li {
     background: rgba(255, 255, 255, 0.171);
 }
 .productCard > .btn-add-cart {
-    cursor: pointer;
     padding: 0;
-    width: 100%;
     font-size: var(--size-icon-float);
+}
+.btn-add-cart {
+    cursor: pointer;
+    width: 100%;
+    padding: 5px;
+    font-size: var(--font-size);
+    font-weight: bold;
     color: var(--secundary);
     border-radius: 10px;
     border: none;
     background: var(--second);
 }
-.productCard > .btn-add-cart:active {
+.btn-add-cart:active {
     background: var(--white);
     color: var(--black);
 }
