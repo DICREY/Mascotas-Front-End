@@ -1,12 +1,14 @@
+/* import fonts, vars and designs */
+@import url("./dynamicStyles/bem.css");
+@import url("./dynamicStyles/var.css");
 @import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
-@import url("bem.css");
-@import url("var.css");
+
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 ::-webkit-scrollbar {
     display:none;
@@ -280,28 +282,23 @@ nav ol ol li {
     justify-content: space-around;
     padding: 10px;
     height: 60vh;
-    width: 180px;
+    width: auto;
+    min-width: 200px;
     gap: 5px;
-    border-radius: 10px;
-    background: var(--card);
-    scroll-snap-align: center;
-}
-.productCard p {
     font-weight: bold;
     font-size: var(--font-size);
     color: var(--white);
+    border-radius: 10px;
+    background: var(--card);
+    scroll-snap-align: center;
     text-wrap: nowrap;
 }
 .productCard img {
-    height: 60%;
+    height: 55%;
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
     object-position: center;
-}
-.productCard button {
-    background: transparent;
-    border: 1px solid var(--lighter-primary);
 }
 .productCard span {
     display: flex;
@@ -310,11 +307,33 @@ nav ol ol li {
     width: 100%;
 }
 .productCard span .btn-view-description {
+    display: flex;
+    place-content: center;
     cursor: pointer;
-    color: var(--second);
+    width: 100%;
+    padding: 5px 1px;
+    color: var(--lighter-primary);
+    border: 1px solid var(--lighter-primary);
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
 }
-.productCard span .btn-view-description:hover {
+.productCard span > .btn-view-description:hover {
     color: var(--white);
+    background: rgba(255, 255, 255, 0.171);
+}
+.productCard > .btn-add-cart {
+    cursor: pointer;
+    padding: 0;
+    width: 100%;
+    font-size: var(--size-icon-float);
+    color: var(--secundary);
+    border-radius: 10px;
+    border: none;
+    background: var(--second);
+}
+.productCard > .btn-add-cart:active {
+    background: var(--white);
+    color: var(--black);
 }
 .product-description {
     position: fixed;

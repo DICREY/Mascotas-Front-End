@@ -1,3 +1,4 @@
+/* import fonts, vars and designs */
 @import url("bem.css");
 @import url("var.css");
 *{
@@ -5,7 +6,6 @@
     padding: 0;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* transition: all .2s ease-in-out; */
 }
 ::-webkit-scrollbar {
     display:none;

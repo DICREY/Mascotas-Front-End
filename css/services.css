@@ -1,6 +1,8 @@
+/* import fonts, vars and designs */
+@import url("./dynamicStyles/bem.css");
+@import url("./dynamicStyles/var.css");
 @import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
-@import url("bem.css");
-@import url("var.css");
+
 *{
     box-sizing: border-box;
     padding: 0;
