@@ -266,6 +266,10 @@ nav ol ol li {
     place-content: center;
     width: 100%;
 }
+.section-products aside picture img {
+    object-fit: cover;
+    object-position: center;
+}
 .section-products section{
     display: flex;
     align-items: center;
@@ -361,6 +365,8 @@ nav ol ol li {
 }
 .product-description img {
     width: 100%;
+    object-fit: cover;
+    object-position: top;
     border-radius: 10px;
     border: 2px solid var(--second);
 }
@@ -369,6 +375,11 @@ nav ol ol li {
     font-size: var(--font-size);
 }
 /* dynamic class */
+.expand-img {
+    position: fixed;
+    width: 80vw;
+    left: 10vw;
+}
 .inactive {
     display: none;
 }
@@ -417,8 +428,15 @@ nav ol ol li {
         border-radius: 50%;
     }
     .section-products aside {
-        display: grid;
-        grid-template-columns: repeat(2,50%);
+        display: flex;
+        place-content: center;
+        place-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .section-products aside picture {
+        height: 60vh;
+        width: 40%;
     }
     .productCard {
         width: 280;
