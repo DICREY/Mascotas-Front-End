@@ -11,10 +11,9 @@ document.addEventListener("DOMContentLoaded",() => {
     
     // Dynamic Labels 
     const menuDeploy = document.getElementById("menu-deploy")
-    const ShopingCart = document.getElementById("Shoping-Cart")
+    const shopingCart = document.getElementById("Shoping-Cart")
     const shopCantCart = document.getElementById("shop-cant")
     const totalPrice = document.getElementById("total-price")
-    const petPictures = document.getElementsByClassName("pet-picture")
 
     // btns 
     const btnMenu = document.getElementById("btn-menu")
@@ -51,7 +50,7 @@ document.addEventListener("DOMContentLoaded",() => {
 
     function addProducts() {
         // Loop
-        for (let i of productList ) {
+        productList.forEach(i => {
 
             // Create labels
             const product = document.createElement("div")
@@ -59,11 +58,11 @@ document.addEventListener("DOMContentLoaded",() => {
             const nameProduct = document.createElement("p")
             const priceProduct = document.createElement("p")
             const spanbtnView  = document.createElement('span')
-            const btnView  = document.createElement('p')
+            const btnView  = document.createElement('span')
             const btnBuy = document.createElement("button")
 
             // Modify labels
-            product.classList.add("productCard")
+            product.className = "productCard"
             imgProduct.src = i.img
             nameProduct.innerText = "Name: " + i.name
             priceProduct.innerText = "Price: $" + i.price
@@ -82,7 +81,7 @@ document.addEventListener("DOMContentLoaded",() => {
             sectionProducts.appendChild(product)
 
             // Object
-            let productElements = {
+            const productElements = {
                 name: i.name,
                 img: i.img,
                 price: i.price,
@@ -93,13 +92,14 @@ document.addEventListener("DOMContentLoaded",() => {
             // Add events
             btnBuy.addEventListener("click",() => addShopCart(productElements))
             btnView.addEventListener("click",() => showDescription(productElements))
-        }
+        })
     }
 
     function showDescription(container) {
-        const sectionExist = main.getElementsByClassName("product-description")
-        if (sectionExist) main.removeChild(sectionExist)
         mainBlur()
+        const sectionExist = main.querySelector(".product-description")
+
+        if (sectionExist) main.removeChild(sectionExist)
 
         // Create labels
         const productDescription = document.createElement('section')
@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded",() => {
         container.appendChild(span)
         container.appendChild(quitProduct)
         li.appendChild(container)
-        ShopingCart.appendChild(li)
+        shopingCart.appendChild(li)
         cantProductCart()
         cartTotalPrice(productElements.price)
 
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded",() => {
         })
     }
 
-    // Dynamic functions
+    // // Dynamic functions
     function mainBlur() {
         header.classList.toggle("blur")
         nav.classList.toggle("blur")
@@ -180,10 +180,21 @@ document.addEventListener("DOMContentLoaded",() => {
 
     function cantProductCart() {
         let lis = shopingCart.querySelectorAll("li")
+        const messageEmpty = shopingCart.querySelector(".empty-message")
 
         if (lis.length > 0) {
             shopCantCart.innerText = "" + lis.length
-        } else shopCantCart.innerText = "0"
+            shopingCart.removeChild(messageEmpty)
+        } else {
+            const p = document.createElement("p")
+
+            shopCantCart.innerText = "0"
+            p.className = "empty-message"
+            p.innerText = "You don't have products on the cart"
+            p.style = "min-width: 150px; color: var(--second); font-size: var(--font-size); font-weight: bold;"
+
+            shopingCart.appendChild(p)
+        }
     }
 
     function cartTotalPrice(price) {
@@ -196,11 +207,11 @@ document.addEventListener("DOMContentLoaded",() => {
 
         if (totPrice > 0 ) {
             const btnBuy = document.createElement("button")
-            btnBuy.className = "btn-link btn-buy-cart"
+            btnBuy.className = "btn-add-cart btn-buy-cart"
             btnBuy.type = "button"
+            btnBuy.innerText = "Buy"
             shopingCart.appendChild(btnBuy)
         }
-
     }
     
     // Call functions 
