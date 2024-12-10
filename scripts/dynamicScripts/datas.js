@@ -1,4 +1,4 @@
-// Main arrays
+// Fetchs
 const petList = async (picturesContainer) => {
     const URL = "https://api.thecatapi.com/v1/images/search?limit=10"
     fetch(URL)
@@ -16,16 +16,7 @@ const petList = async (picturesContainer) => {
     })
 }
 
-const servicesList = () => {
-    const URL = ""   
-    fetch(URL)
-    .then(res => res.json())
-    .then(datas => {
-        let info = datas
-
-    })
-}
-
+// Main arrays
 const productList = [
     {
         name: "Dog Dish",
@@ -217,20 +208,3 @@ const dataUser = [
         ]
     }
 ]
-
-function petsGet() {
-    const headers = new Headers({
-        "Content-Type": "application/json",
-        "x-api-key":"live_zUUJgF0bKp5p2ql6OyJtavP7z0t2Dhyw6OAPoTbmSUg6t9JNiKYj8fdE1eTc5xwt"
-    })
-    const requestOption = {
-        method: "GET",
-        headers: headers
-    }
-
-    fetch("",requestOption)
-    .then(res => res.json())
-    .then(data => {
-        let info = data
-    })
-}

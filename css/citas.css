@@ -1,6 +1,6 @@
 /* import fonts, vars and designs */
-@import url("bem.css");
-@import url("var.css");
+@import url("dynamicStyles/bem.css");
+@import url("./dynamicStyles/var.css");
 *{
     box-sizing: border-box;
     padding: 0;
