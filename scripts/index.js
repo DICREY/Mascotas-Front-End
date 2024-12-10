@@ -50,24 +50,29 @@ document.addEventListener("DOMContentLoaded",() => {
     }
 
     function addProducts() {
+        // Loop
         for (let i of productList ) {
+
+            // Create labels
             const product = document.createElement("div")
             const imgProduct = document.createElement("img")
             const nameProduct = document.createElement("p")
             const priceProduct = document.createElement("p")
-            const btnBuy = document.createElement("button")
             const spanbtnView  = document.createElement('span')
             const btnView  = document.createElement('p')
+            const btnBuy = document.createElement("button")
 
+            // Modify labels
             product.classList.add("productCard")
             imgProduct.src = i.img
             nameProduct.innerText = "Name: " + i.name
             priceProduct.innerText = "Price: $" + i.price
-            btnBuy.innerText = "Add Cart"
-            btnBuy.classList.add("btn-link")
             btnView.className = "btn-view-description"
             btnView.textContent = "View Product"
+            btnBuy.innerHTML = "<i class='bx bxs-cart-add'></i>"
+            btnBuy.className = "btn-add-cart"
 
+            // Add labels
             spanbtnView.appendChild(btnView)
             product.appendChild(imgProduct)
             product.appendChild(nameProduct)
@@ -76,6 +81,7 @@ document.addEventListener("DOMContentLoaded",() => {
             product.appendChild(spanbtnView)
             sectionProducts.appendChild(product)
 
+            // Object
             let productElements = {
                 name: i.name,
                 img: i.img,
@@ -84,8 +90,9 @@ document.addEventListener("DOMContentLoaded",() => {
                 category: i.categories
             }
 
-            btnView.addEventListener("click",() => showDescription(productElements))
+            // Add events
             btnBuy.addEventListener("click",() => addShopCart(productElements))
+            btnView.addEventListener("click",() => showDescription(productElements))
         }
     }
 
@@ -93,6 +100,7 @@ document.addEventListener("DOMContentLoaded",() => {
         const sectionExist = main.getElementsByClassName("product-description")
         if (sectionExist) main.removeChild(sectionExist)
         mainBlur()
+
         // Create labels
         const productDescription = document.createElement('section')
         const btnExitDescription = document.createElement('button')
@@ -103,8 +111,9 @@ document.addEventListener("DOMContentLoaded",() => {
         const categProduct = document.createElement('p')
         const desProduct = document.createElement('p')
 
+        // Modify labels
         btnExitDescription.innerHTML = `<i class='bx bx-x'></i>`
-        btnExitDescription.classList = "btn-exit-description"
+        btnExitDescription.className = "btn-exit-description"
         imgProduct.src = container.img
         nameProduct.innerHTML = `<strong>Name: </strong>${container.name}`
         priceProduct.innerHTML = `<strong>Price: </strong>${container.price}`
@@ -112,6 +121,7 @@ document.addEventListener("DOMContentLoaded",() => {
         desProduct.innerText = container.description
         productDescription.className = "product-description"
 
+        // Add labels
         spanP.appendChild(nameProduct)
         spanP.appendChild(priceProduct)
         spanP.appendChild(categProduct)
@@ -121,6 +131,7 @@ document.addEventListener("DOMContentLoaded",() => {
         productDescription.appendChild(spanP)
         main.appendChild(productDescription)
 
+        // Add events 
         btnExitDescription.addEventListener("click",() => {
             mainBlur()
             main.removeChild(productDescription)
@@ -168,21 +179,30 @@ document.addEventListener("DOMContentLoaded",() => {
     }
 
     function cantProductCart() {
-        let lis = ShopingCart.querySelectorAll("li")
-        if(lis.length > 0) {
+        let lis = shopingCart.querySelectorAll("li")
+
+        if (lis.length > 0) {
             shopCantCart.innerText = "" + lis.length
-            const btnBuy = document.createElement('button')
-            btnBuy.className = "btn-link btn-buy"
-            btnBuy.type = "button"
-            btnBuy.innerText = "Buy"
         } else shopCantCart.innerText = "0"
     }
 
     function cartTotalPrice(price) {
+        const existBtnBuy = shopingCart.querySelector(".btn-buy-cart")
+
         totPrice += price
         totalPrice.innerText = `Total price: $${totPrice}`
-    }
 
+        if (existBtnBuy) shopingCart.removeChild(existBtnBuy)
+
+        if (totPrice > 0 ) {
+            const btnBuy = document.createElement("button")
+            btnBuy.className = "btn-link btn-buy-cart"
+            btnBuy.type = "button"
+            shopingCart.appendChild(btnBuy)
+        }
+
+    }
+    
     // Call functions 
     dynamicNav(btnMenu,menuDeploy)
     addPets(contenedorAds)
