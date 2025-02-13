@@ -116,7 +116,20 @@ main {
     border: 2px solid var(--gray);
     border-radius: 10px;
 }
-
+.btn-view-description {
+    display: flex;
+    width: 100%;
+    border: 2px solid var(--lighter-primary);
+    border-radius: 10px;
+    padding: 5px;
+    place-content: center;
+    color: var(--secundary);
+    font-weight: bold;
+    background: var(--lighter-primary);
+}
+.btn-view-description:hover {
+    transform: scale(1.03);
+}
 /* dynamic class */
 .inactive {
     display: none;

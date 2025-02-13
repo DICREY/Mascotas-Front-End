@@ -16,20 +16,39 @@ document.addEventListener("DOMContentLoaded",() => {
             const servicesCard = document.createElement("div")
             const img = document.createElement("img")
             const title = document.createElement("p")
-            const description = document.createElement("p")
+            const viewServices = document.createElement("span")
 
             // Modify labels
             img.src = i.url
             title.className = "sub-title"
             title.innerHTML = i.name
-            // description.innerHTML = i.description
+            viewServices.className = "btn-view-description"
+            viewServices.innerHTML = "View Description"
             
             // Add childs
             servicesContainer.appendChild(servicesCard)
             servicesCard.appendChild(img)
             servicesCard.appendChild(title)
-            // servicesCard.appendChild(description)
+            servicesCard.appendChild(viewServices)
+
+            let service = {
+                img: i.url,
+                title: i.name,
+                description: i.description
+            }
+
+            // Events 
+            viewServices.addEventListener("click",() => viewDescription(service))
         })
+    }
+
+    function viewDescription(service) {
+        // fetch("",{
+        //     method: 'POST',
+        //     body: {
+        //         ...service
+        //     }
+        // })
     }
 
     // Call functions
